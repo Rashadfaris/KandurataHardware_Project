@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+}
+
+.suppliers-wrapper {
+    display: flex; /* Use flexbox to layout sidebar and content */
+    height: 88vh; /* Full height of the viewport */
+}
+
+/* Sidebar styling */
+.SupplierSidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .SupplierSidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .SupplierSidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .SupplierSidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .SupplierSidebar ul li a:hover {
+    background-color: #555;
+    text-decoration: underline;
+  }
+
+.suppliers-content {
+    flex-grow: 1; /* Allow content to fill the remaining space */
+    padding: 20px; /* Padding around content */
+}
+
+.suppliers-header {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between elements */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.form-search {
+    display: flex; /* Align input and button in a row */
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-add,
+.btn-generate-pdf,
+.btn-toggle-sort {
+    background-color: #000000; /* Primary button color */
+    color: white;
+}
+
+.btn-delete {
+    background-color: #000000; /* Danger button color */
+    color: white;
+}
+
+.btn-edit {
+    background-color: #000000; /* Warning button color */
+    color: white;
+}
+
+.table {
+    width: 100%; /* Full width of the container */
+    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.table th, .table td {
+    border: 1px solid #ddd; /* Border for cells */
+    padding: 8px; /* Padding inside cells */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Header background color */
+}
+
+.alert {
+    margin-top: 20px; /* Space above alerts */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Green for success */
+    color: #155724; /* Dark green text */
+}
+
+.alert-warning {
+    background-color: #fff3cd; /* Yellow for warning */
+    color: #856404; /* Dark yellow text */
+}
+
+.filter-wrapper {
+    display: flex; /* Align filter elements in a row */
+    align-items: center; /* Center vertically */
+}
+
+.form-select {
+    margin-right: 10px; /* Space between select and button */
+}

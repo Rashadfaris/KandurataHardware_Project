@@ -1,0 +1,73 @@
+/* Container for the form */
+.reply-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Heading */
+  .reply-form-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Status message */
+  .status-message {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .status-message.success {
+    color: green;
+  }
+  
+  .status-message.error {
+    color: red;
+  }
+  
+  /* Form elements */
+  .reply-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reply-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .reply-form-container input[type="text"],
+  .reply-form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .reply-form-container textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  /* Submit button */
+  .reply-form-container button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reply-form-container button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  

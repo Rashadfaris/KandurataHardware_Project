@@ -1,0 +1,43 @@
+.order-confirmation {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .order-confirmation h1 {
+    color: #4CAF50;
+  }
+  
+  .order-confirmation p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .order-details {
+    margin: 1rem auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  .order-details th, .order-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .order-details th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .order-confirmation button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .order-confirmation button:hover {
+    background-color: #45a049;
+  }
+  

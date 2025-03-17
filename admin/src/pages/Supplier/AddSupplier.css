@@ -1,0 +1,122 @@
+.product-add-container {
+  flex: 1; /* Take up the remaining space */
+  padding: 20px;
+  width: 600px; /* Set a fixed width */
+  margin-top: 40px; /* Space from top */
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-add-container h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center the heading */
+  font-weight: 700; /* Bold weight for headings */
+}
+
+.field-gap {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+.label {
+  font-weight: 700; /* Bold labels */
+}
+
+.input-field {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded edges */
+  transition: border-color 0.3s; /* Transition for border color */
+}
+
+.input-field:focus {
+  border-color: tomato; /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  font-size: 0.875rem; /* Smaller font size for errors */
+  margin-top: 5px; /* Space above error messages */
+}
+
+.submit-btn {
+  background-color: #000000; /* Primary button color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded edges */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for background color */
+  width: 100%; /* Full width button */
+}
+
+.submit-btn:hover {
+  background-color: tomato; /* Darker shade on hover */
+}
+
+.dashboard-layout {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.product-add-section {
+  width: 100%;
+  flex: 1; /* Allow the add section to take up remaining space */
+  padding: 20px; /* Add some padding for aesthetics */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+  text-decoration: underline;
+}
+
+.supplier-dropdown {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  position: absolute;
+  background: white;
+  z-index: 1; /* Make sure dropdown is above other content */
+}
+
+.supplier-dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.supplier-dropdown li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}

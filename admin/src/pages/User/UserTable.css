@@ -1,0 +1,122 @@
+/* UserTable.css */
+
+.user-table-container {
+  width: 100%;
+  display: flex;
+  height: 88vh;
+  font-family: Arial, sans-serif; /* Ensure a clean, modern font */
+}
+
+.user-table-content {
+  flex: 1; /* Allow content to fill remaining space */
+  padding: 20px; /* Add some padding */
+  display: flex; /* Center align the table */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.user-table {
+  width: 100%;
+  max-width: 800px; /* Set a max width for better appearance */
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #000000;
+  font-weight: bold; /* Make header text bold */
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 20%; /* Set width for the email column */
+  text-align: center; /* Center align the email column */
+}
+
+.user-table td {
+  text-align: left; /* Align other cells to the left */
+}
+
+.user-table td button {
+  margin: 0;
+  padding: 5px 10px; /* Adjusted padding for the button */
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: black; /* Black background for buttons */
+  color: white; /* White text for better contrast */
+  border: none; /* Remove default border */
+  font-size: 14px; /* Set a font size for buttons */
+}
+
+.user-table td button:hover {
+  background-color: #333; /* Darker shade for hover effect */
+}
+
+.user-table div {
+  display: flex;
+  justify-content: flex-end; /* Aligns the actions to the right */
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Sidebar Styling */
+.UserSidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.UserSidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.UserSidebar ul li {
+  margin: 15px 0;
+}
+
+.UserSidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block; 
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.UserSidebar ul li a:hover {
+  background-color: #555;
+  text-decoration: underline;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .user-table {
+      width: 100%; /* Ensure the table uses full width on smaller screens */
+  }
+
+  .user-table img {
+      width: 40px; /* Optional: If you have images in the table */
+  }
+
+  .user-table td button {
+      font-size: 12px; /* Smaller font size for buttons on mobile */
+      padding: 4px 8px; /* Adjust padding for mobile */
+  }
+}

@@ -1,0 +1,40 @@
+/* EditEmployee.css */
+.edit-employee {
+    padding: 20px;
+}
+
+.edit-employee h2 {
+    margin-bottom: 20px;
+}
+
+.edit-employee form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-employee form div {
+    margin-bottom: 15px;
+}
+
+.edit-employee form label {
+    margin-bottom: 5px;
+}
+
+.edit-employee form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-employee form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-employee form button:hover {
+    background-color: #45a049;
+}

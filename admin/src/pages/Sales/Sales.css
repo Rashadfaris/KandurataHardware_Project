@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+  }
+  
+  /* Body styling */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-container{
+    width: 100%;
+  display: flex;
+  font-family: Arial, sans-serif;
+  
+  }
+/* Sidebar styling */
+.SalesSidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .SalesSidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .SalesSidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .SalesSidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .SalesSidebar ul li a:hover {
+    background-color: #555;
+    text-decoration: underline;
+  }
+
+  

@@ -1,0 +1,115 @@
+/* General form styles */
+.form1{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input, select, textarea {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 80px;
+  }
+  
+  
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal window */
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 900px;
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  /* Close modal button */
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .close-modal:hover {
+    background-color: darkred;
+  }
+  
+  /* Table styling inside the modal */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  td button {
+    margin-right: 5px;
+  }
+  
+  /* Accept and Decline buttons */
+  button.accept {
+    background-color: green;
+  }
+  
+  button.accept:hover {
+    background-color: darkgreen;
+  }
+  
+  button.decline {
+    background-color: #dc3545;
+  }
+  
+  button.decline:hover {
+    background-color: #c82333;
+  }
+  
+  /* Disabled buttons */
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

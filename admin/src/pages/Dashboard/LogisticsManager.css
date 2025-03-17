@@ -1,0 +1,189 @@
+/* Resetting margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall dashboard container */
+.dashboard {
+  width: 100%;
+  display: flex;
+  height: 88vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+/* Sidebar styling */
+.LogisticSidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.LogisticSidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.LogisticSidebar ul li {
+  margin: 15px 0;
+}
+
+.LogisticSidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.LogisticSidebar ul li a:hover {
+  background-color: #555;
+  text-decoration: underline;
+}
+
+/* Main content styling */
+.main-content {
+  flex-grow: 1; /* Allow it to grow to fill remaining space */
+  padding: 20px;
+  background-color: #f4f4f4;
+  overflow: auto; /* Allows scrolling if content overflows */
+}
+
+/* Stats section styling */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 10px;
+  min-width: 150px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.stat-box h2 {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
+/* Chart section styling */
+.chart-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents the chart from overflowing */
+}
+
+.chart-section h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Ensure the chart is responsive */
+.chart-section canvas {
+  width: 72% !important; /* Makes sure the chart fits within its container */
+  height: auto !important; /* Keeps the aspect ratio of the chart */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .LogisticSidebar {
+    width: 250px;
+  }
+
+  .stat-box {
+    padding: 15px;
+  }
+
+  .chart-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .LogisticSidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .LogisticSidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .stat-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .chart-section h3 {
+    font-size: 16px;
+  }
+
+  .chart-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-box {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .chart-section h3 {
+    font-size: 14px;
+  }
+
+  .chart-section {
+    padding: 8px;
+  }
+}

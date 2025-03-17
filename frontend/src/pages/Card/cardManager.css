@@ -1,0 +1,133 @@
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+
+  
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form select {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific button names */
+button.add-card-btn {
+    background-color: #28a745;
+}
+
+button.add-card-btn:hover {
+    background-color: #218838;
+}
+
+button.retrieve-card-btn {
+    background-color: #17a2b8;
+}
+
+button.retrieve-card-btn:hover {
+    background-color: #138496;
+}
+
+button.edit-card-btn {
+    background-color: #ffc107;
+}
+
+button.edit-card-btn:hover {
+    background-color: #e0a800;
+}
+
+button.delete-card-btn {
+    background-color: #dc3545;
+}
+
+button.delete-card-btn:hover {
+    background-color: #c82333;
+}
+
+/* Card display section */
+.card-details {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-details p {
+    margin: 6px 0;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #218838;
+}
+
+.modal button.close-btn {
+    background-color: #6c757d;
+}
+
+.modal button.close-btn:hover {
+    background-color: #5a6268;
+}

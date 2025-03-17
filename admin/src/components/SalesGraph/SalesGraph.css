@@ -1,0 +1,55 @@
+/* SalesGraph.css */
+.sales-graph-container {
+    background-color: #fff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Spacing around the graph container */
+    animation: fadeIn 0.5s ease-in; /* Animation for fade-in effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start from transparent */
+    }
+    to {
+      opacity: 1; /* End at full opacity */
+    }
+  }
+  
+  .line-chart {
+    position: relative; /* Position relative for responsive resizing */
+    height: 400px; /* Set a specific height for the chart */
+    max-width: 100%; /* Ensure it fits within the parent container */
+    background-color: rgba(240, 240, 240, 0.5); /* Light grey background for the graph */
+    border-radius: 8px; /* Matching rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
+  }
+  
+  .chartjs-render-monitor {
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .chartjs-render-monitor:hover {
+    transform: scale(1.02); /* Slightly scale up on hover for effect */
+  }
+  
+  .legend-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between legend items */
+    margin-top: 10px; /* Spacing above legend */
+  }
+  
+  .legend-item {
+    display: flex; /* Flex for item layout */
+    align-items: center; /* Center items vertically */
+    margin-right: 20px; /* Spacing between legend items */
+  }
+  
+  .legend-color-box {
+    width: 15px; /* Fixed width for color box */
+    height: 15px; /* Fixed height for color box */
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-right: 5px; /* Space between color box and text */
+  }
+  

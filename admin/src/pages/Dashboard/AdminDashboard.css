@@ -1,0 +1,109 @@
+.admin-dashboard {
+  width: 100%;
+  display: flex;
+  height: 88vh; /* Full height */
+  background-color: #f0f4f8; /* Light background color for the dashboard */
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling */
+  background-color: white; /* White background for the content area */
+  border-radius: 8px; /* Rounded corners for the content area */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Sidebar styling */
+.adminSidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.adminSidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.adminSidebar ul li {
+  margin: 15px 0;
+}
+
+.adminSidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.adminSidebar ul li a:hover {
+  background-color: #555;
+  text-decoration: underline;
+}
+
+h1 {
+  color: tomato; /* Title color */
+  margin-bottom: 20px;
+  font-size: 28px; /* Larger font size for title */
+  font-weight: bold; /* Make the title bold */
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between cards */
+  margin-bottom: 30px; /* Space below grid */
+}
+
+.stat-card {
+  background-color: tomato; /* Background color for cards */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.2s; /* Animation for hover effect */
+  text-align: center; /* Center align text */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.stat-value {
+  font-size: 24px; /* Increase font size for the values */
+  font-weight: bold; /* Make values bold */
+}
+
+.graphs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between graphs */
+}
+
+.sales-graph-container, .revenue-graph-container {
+  background-color: white; /* Background for the graph */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding around the graph */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for graph container */
+  width: 100%; /* Full width */
+  height: 400px; /* Fixed height for the graph */
+}
+
+.revenue-graph {
+  height: 100%; /* Full height for the graph */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}

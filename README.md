@@ -1,3 +1,4 @@
+
 # KandurataHardware_Project
 An online hardware store system replicates the offerings and services of a traditional hardware store in a digital environment
 
@@ -11,3 +12,4 @@ An online hardware store system replicates the offerings and services of a tradi
  Delivery Scheduling: Admin & Logistics Manager can schedule deliveries.
  Inquiries Management: Users can send inquiries to the Logistics Manager.
  Offline sales Managment :Managing offline sales.
+

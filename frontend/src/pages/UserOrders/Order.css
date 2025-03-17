@@ -1,0 +1,106 @@
+/* Order container */
+.order-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main heading */
+.order-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Individual order item */
+.order-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects for order items */
+.order-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Paragraph styles */
+.order-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Subheading for ordered items */
+.order-item h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* List of ordered items */
+.items-list {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Individual item in the list */
+.items-list li {
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for items in the list */
+.items-list li:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/* Bold text within list items */
+.items-list li span {
+  font-weight: bold;
+}
+
+/* No orders message */
+.no-orders {
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .order-container {
+    width: 95%;
+  }
+
+  .order-container h2 {
+    font-size: 22px; /* Smaller heading for mobile */
+  }
+
+  .order-item {
+    padding: 10px; /* Smaller padding on mobile */
+  }
+
+  .order-item h4 {
+    font-size: 16px; /* Smaller subheading for mobile */
+  }
+
+  .items-list li {
+    padding: 8px; /* Smaller padding for list items on mobile */
+  }
+}

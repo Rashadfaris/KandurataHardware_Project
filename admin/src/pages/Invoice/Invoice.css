@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.customer-name, .discount-section, .total-price {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.customer-name label, .discount-section label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.invoice-table {
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.invoice-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  
+  color: gray;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.invoice-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.invoice-table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.invoice-table-row p {
+  margin: 0;
+  padding: 5px;
+}
+
+.delete-button, .generate-button, .back-button {
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.generate-button {
+  background-color: tomato;
+}
+
+.back-button {
+  background-color: black;
+  margin-left: 10px;
+}
+
+.delete-button {
+  margin-top: 0px;
+  color: black;
+}
+
+.generate-button:hover, .back-button:hover, .delete-button:hover {
+  opacity: 0.9;
+}
+
+.total-price h3 {
+  color: #333;
+  font-weight: bold;
+}
+.Invoice{
+  margin-top: 100px;
+  margin-left: 800px;
+  align-items: center;
+}

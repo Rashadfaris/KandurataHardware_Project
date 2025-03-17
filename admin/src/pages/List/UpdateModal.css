@@ -1,0 +1,76 @@
+.update-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+  z-index: 1000;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-modal-content {
+  background-color: white;
+  width: max(23vw, 330px);
+  padding: 30px 35px; /* Adjusted padding for better spacing */
+  border-radius: 12px; /* Increased border-radius for smoother edges */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Slightly reduced gap for tighter layout */
+  color: #333; /* Darker text color for better readability */
+  font-size: 15px; /* Slightly increased font size */
+  animation: fadeIn 0.5s;
+}
+
+.update-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-size: 18px; /* Increased font size for title */
+  font-weight: 600; /* Added font weight for a stronger title presence */
+  margin-bottom: 10px; /* Added margin for separation from content */
+}
+
+.update-modal-title img {
+  width: 16px;
+  cursor: pointer;
+}
+
+.update-modal-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap between inputs for a more compact form */
+}
+
+.update-modal-input input,
+.update-modal-input textarea {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 12px 15px; /* Increased padding for larger clickable area */
+  border-radius: 6px; /* Slightly rounded corners for better aesthetics */
+  font-size: 14px; /* Unified font size */
+}
+
+.update-modal-buttons {
+  display: flex;
+  justify-content: flex-end; /* Right-align buttons */
+  gap: 10px; /* Added gap between buttons */
+}
+
+.update-modal-buttons button {
+  border: none;
+  padding: 12px 20px; /* Increased padding for a more substantial feel */
+  border-radius: 4px;
+  color: white;
+  background-color: tomato;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.update-modal-buttons button:hover {
+  background-color: #e04a3f; /* Darker shade on hover */
+}

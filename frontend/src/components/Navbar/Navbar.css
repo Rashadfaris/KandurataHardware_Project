@@ -1,0 +1,219 @@
+/* Existing CSS */
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative; /* Required for positioning the search bar */
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer; /* Ensure the search icon is clickable */
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+.logout-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 5s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* New CSS for Search Bar */
+.navbar-search {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px; /* Adjust width as needed */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 30px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    padding: 5px; /* Add some padding */
+}
+
+.navbar-search.show {
+    display: block;
+}
+
+.navbar-search input {
+    width: calc(100% - 50px); /* Adjusting for the button */
+    padding: 10px;
+    border: none;
+    border-radius: 30px; /* Rounded input */
+    box-sizing: border-box;
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background-color: #f9f9f9;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.search-result-item div {
+    flex: 1;
+}
+
+.search-result-item h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-result-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #49557e;
+}
+
+.voice-search-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-search p {
+    font-size: 14px;
+    color: #555;
+}
+
+.navbar-search input:focus {
+    outline: none; /* Remove outline when focusing */
+}
+
+/* Adjusted styles for voice search button */
+.voice-search-btn {
+    background: none;
+    border: none; /* Remove border */
+    cursor: pointer;
+    position: absolute; /* Position it inside the input */
+    right: 10px; /* Aligns it to the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    z-index: 1; /* Ensure it's on top of the input field */
+}

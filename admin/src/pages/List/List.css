@@ -1,0 +1,95 @@
+/* Styling for the main container to ensure proper layout with Sidebar */
+.main-container {
+  width: 100%;
+  display: flex;
+  font-family: Arial, sans-serif; /* Ensure a clean, modern font */
+  
+  }
+  
+  /* Product list container styling */
+  .product-list-container {
+    margin-left: 100px;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+  
+  /* Search input styling */
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+ /* Notification section */
+.notification-section {
+    position: fixed; /* Fix the position to the viewport */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    display: inline-block; /* Ensure it takes only as much space as needed */
+    z-index: 1000; /* Make sure it appears above other content */
+  }
+  
+  /* Notification icon */
+  .noti-icon {
+    width: 30px; /* Resize notification icon */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Notification count styling */
+  .notification-count {
+    position: absolute;
+    top: 0; /* Position at the top */
+    right: 0; /* Position at the right */
+    background-color: red; /* Background color for count */
+    color: white; /* Text color */
+    border-radius: 50%; /* Make it a circle */
+    padding: 2px 6px; /* Adjust padding for better appearance */
+    font-size: 12px; /* Font size */
+    font-weight: bold; /* Make the font bold */
+    transform: translate(50%, -50%); /* Shift it slightly to the right and up for better alignment */
+  }
+  
+  
+  /* Alerts popup styling */
+  .alerts-popup {
+    position: absolute;
+    top: 40px; /* Position below the icon */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  /* Actions button styling */
+  .actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  /* Styling for table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Low stock message styling */
+  .low-stock-message {
+    color: red;
+    font-weight: bold;
+  }
+
+  

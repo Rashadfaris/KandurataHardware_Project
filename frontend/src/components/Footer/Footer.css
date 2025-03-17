@@ -1,0 +1,87 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 8vw; /* Adjust if needed */
+    gap: 20px;
+    padding-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+    padding: 0; /* Remove side padding */
+    margin: 0; /* Remove margin */
+}
+
+.ifooter-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+/* Ensure text in sections is left-aligned */
+.footer .ifooter-section.description p,
+.footer .ifooter-section.contact p,
+.footer .ifooter-bottom p {
+    color: #fff; /* Ensure text is white */
+}
+
+.footer .ifooter-section.description p,
+.footer .ifooter-section.contact p {
+    text-align: left; /* Left align the text in sections */
+}
+
+.footer-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.ifooter-section h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #fff; /* Ensure heading is white */
+}
+
+.ifooter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ifooter-section ul li {
+    margin: 10px 0;
+}
+
+.ifooter-section ul li a {
+    color: #fff; /* All text is white */
+    text-decoration: none;
+}
+
+.ifooter-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Ensure sections maintain left alignment */
+.ifooter-section {
+    text-align: left; /* Apply left alignment to all sections */
+}
+
+.social-media-icons {
+    margin-top: 10px; /* Add space above the icons */
+}
+
+.social-icon {
+    width: 30px; /* Adjust the width of icons */
+    height: auto; /* Keep aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s; /* Smooth effect on hover */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale up icon on hover */
+}

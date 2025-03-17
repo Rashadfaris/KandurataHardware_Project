@@ -1,0 +1,146 @@
+.add {
+    width: calc(100% + 100px);
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.add form {
+    gap: 20px;
+}
+
+.add-img-upload img {
+    width: 120px;
+}
+
+.add-product-name,
+.add-product-description,
+.add-product-id,
+.add-supplier-name,
+.add-date {
+    width: max(40%, 350px); /* Adjusted the width here if necessary */
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-product-id input,
+.add-supplier-name input,
+.add-date input {
+    padding: 10px;
+}
+
+.add-category-price-quantity {
+    display: flex;
+    gap: 30px;
+}
+
+.add-category-price-quantity select,
+.add-category-price-quantity input {
+    max-width: 140px; /* Adjust max width if needed */
+    padding: 10px;
+}
+
+.add-product-id,
+.add-supplier-name,
+.add-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-product-id p,
+.add-supplier-name p,
+.add-date p {
+    margin-bottom: 5px;
+}
+
+.add-product-id input,
+.add-supplier-name input,
+.add-date input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-date input {
+    background-color: #f9f9f9;
+}
+
+.add-btn {
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+.dashboard {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.add-container {
+    width:100%;
+    flex: 1; /* Allow the add-container to take up remaining space */
+    padding: 20px; /* Add some padding for aesthetics */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+/* Sidebar styling */
+.PrdAddSidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .PrdAddSidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .PrdAddSidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .PrdAddSidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .PrdAddSidebar ul li a:hover {
+    background-color: #555;
+    text-decoration: underline;
+  }
+  .supplier-dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    position: absolute;
+    background: white;
+    z-index: 1; /* Make sure dropdown is above other content */
+}
+
+.supplier-dropdown li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.supplier-dropdown li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}

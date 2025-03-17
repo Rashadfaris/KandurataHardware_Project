@@ -1,0 +1,153 @@
+.place-order{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+
+}
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+.place-order-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.place-order-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+.place-order-left .province-selection {
+    position: relative;
+}
+
+.place-order-left .province-selection select {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+}
+
+
+.place-order-left .province-selection::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #333;
+}
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+.place-order-right{
+    width: 100%;
+    max-width:max(40%,500px) ;
+}
+.place-order .cart-total button{
+    margin-top: 30px;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem; 
+    margin-top: -8px;
+    margin-bottom: 15px;
+    font-weight: 400; 
+}
+
+
+input.error, select.error {
+    border-color: red;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input.error, 
+.input-wrapper select.error {
+    border-color: red;
+}
+
+/* PlaceOrder.css */
+
+/* General button styles */
+button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Add padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline block for button sizing */
+  font-size: 16px; /* Increase font size */
+  margin: 10px 2px; /* Margin around buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+  background-color: tomato /* Darker green on hover */
+}
+
+/* Specific styles for 'Proceed to Payment' button */
+button.proceed-payment {
+  background-color: #008CBA; /* Blue background */
+}
+
+button.proceed-payment:hover {
+  background-color: #007bb5; /* Darker blue on hover */
+}
+
+/* Specific styles for 'Place Order' button */
+button.place-order {
+  background-color: #f44336; /* Red background */
+}
+
+button.place-order:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
+/* Payment method selection styles */
+.payment-method-selection {
+  margin-top: 20px; /* Space above the section */
+  padding: 10px; /* Padding inside the section */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.payment-method-selection p {
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.payment-method-selection label {
+  display: block; /* Block display for labels */
+  margin-bottom: 10px; /* Space between options */
+  font-size: 16px; /* Increase font size for readability */
+}
+
+.payment-method-selection input {
+  margin-right: 10px; /* Space between radio button and label */
+}

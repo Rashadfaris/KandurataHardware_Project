@@ -1,0 +1,56 @@
+.login-page {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  background-image: url('bc3.jpg'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.login-form-container {
+  background: rgba(236, 228, 226, 0.7); /* Orange with 70% opacity */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 450px;
+  height: 500px;
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0b0b0b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
