@@ -1,0 +1,186 @@
+.supplier-list-content {
+    margin-left: 260px;
+}
+
+.users-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.users-wrapper {
+    margin-top: 20px;
+}
+
+.form-search {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 600px;
+    border:1px;
+    border-color:  #000000;
+    margin-left: 10px;
+}
+
+.form-control {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+
+/* Add button */
+.btn-add {
+    background-color: #000000;
+    height: 45px;
+    width: 90px;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    margin-left: 27px;
+    margin-top: 30px;
+}
+
+/* Sort button */
+
+/* Report generation button */
+.btn-warning {
+    background-color: #000000;
+    height: 35px;
+    width: 135px;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    margin-left: 8px;
+}
+
+.btn-warning:hover {
+    background-color: rgb(247, 99, 73);
+}
+
+/* Table styling */
+.table {
+    width: 98%;
+    margin-left: 40px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #3d3b3b;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.table th {
+    background-color: rgb(247, 99, 73);
+    font-size: 20px;
+    color: #000000;
+   
+}
+
+.table tr:nth-child(even) {
+    background-color: #d6d5d5;
+}
+
+.table tr:hover {
+    background-color: rgb(255, 206, 196);
+}
+
+/* Filter select styling */
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.form-select {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: rgb(255, 132, 116);
+    color: white;
+}
+
+.alert-warning {
+    background-color: rgb(255, 7, 7);
+    color: black;
+}
+
+
+/* Container for buttons */
+.btn-container {
+    display: flex; /* Aligns buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Edit button */
+.btn-edit {
+    background-color: #050505;
+    padding: 10px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* For the Link element */
+    border: none; /* Ensures it looks like a button */
+    transition: background-color 0.3s;
+    height: 32px;
+    width: 60px;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+/* Delete button */
+.btn-delete {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    height: 32px;
+    width: 60px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* For the Link element */
+    border: none; /* Ensures it looks like a button */
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+
+/* Hover effects */
+.btn-edit:hover {
+    background-color: tomato;
+}
+
+.btn-delete:hover {
+    background-color: tomato;
+}

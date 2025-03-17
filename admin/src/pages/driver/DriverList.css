@@ -1,0 +1,191 @@
+/* General Container for Driver List */
+.DriverListSidebar {
+  display: flex; /* Keep the flexbox layout for sidebar and content */
+  height: 88vh; /* Same height as the form container */
+  font-family: Arial, sans-serif; /* Ensure consistency in font */
+}
+
+/* Sidebar Styling */
+.DriverListSidebar {
+  position: fixed; /* Fixed position to keep sidebar in view */
+  top: 114px; /* Align with the top (adjust based on your layout) */
+  left: 0; /* Align to the left */
+  width: 250px; /* Set width for the sidebar */
+  height: calc(100% - 114px); /* Full height minus top spacing */
+  background-color: #333; /* Sidebar background color */
+  color: #fff; /* Sidebar text color */
+  padding: 20px; /* Padding for the sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space items evenly */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.DriverListSidebar ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.DriverListSidebar li {
+  margin: 15px 0; /* Space between list items */
+}
+
+.DriverListSidebar ul li a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  display: block; /* Block display for full width */
+  padding: 10px; /* Padding for links */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.DriverListSidebar ul li a:hover {
+  background-color: #555; /* Hover effect */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Content area for the driver list */
+.driver-list-content {
+  flex: 1; /* Take the remaining space */
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding: 20px; /* Padding for content */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Table Styling */
+.driver-table {
+  margin-top: 30px; /* Spacing above the table */
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+.driver-table th,
+.driver-table td {
+  padding: 12px; /* Padding for cells */
+  text-align: left; /* Align text left */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+.driver-table th {
+  background-color: #000000; /* Dark background for headers */
+  color: white; /* White text for headers */
+}
+
+/* Button Styling for actions */
+.driver-actions {
+  display: flex; /* Use flexbox layout */
+  gap: 10px; /* Add space between the buttons */
+}
+
+.driver-actions button {
+  padding: 8px 16px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.delete-button {
+  background-color: tomato; /* Color for delete button */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d65f5f; /* Darker color on hover */
+}
+
+.edit-button {
+  background-color: black; /* Color for edit button */
+  color: white; /* White text */
+}
+
+.edit-button:hover {
+  background-color: #444; /* Darker color on hover */
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed; /* Full-screen overlay */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center; /* Center content */
+  justify-content: center; /* Center content */
+}
+
+.modal-content {
+  background-color: #fff; /* White background for modal */
+  padding: 45px; /* Padding for modal content */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 650px; /* Max width for modal */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text in modal */
+}
+
+.modal-actions button {
+  padding: 10px 20px; /* Padding for modal buttons */
+  margin: 10px; /* Margin for spacing */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.confirm-delete-button {
+  background-color: tomato; /* Color for delete confirm button */
+  color: white; /* White text */
+}
+
+.confirm-delete-button:hover {
+  background-color: #d65f5f; /* Darker on hover */
+}
+
+.cancel-button {
+  background-color: black; /* Black cancel button */
+  color: white; /* White text */
+}
+
+.cancel-button:hover {
+  background-color: #444; /* Darker on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .DriverListSidebar {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .driver-list-content {
+    margin-left: 200px; /* Adjust margin for smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .driver-table th,
+  .driver-table td {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .DriverListSidebar {
+    position: relative; /* Change position for smaller screens */
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+  }
+
+  .driver-list-content {
+    margin-left: 0; /* No left margin */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .driver-table {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .driver-actions button {
+    padding: 6px 10px; /* Smaller button padding */
+  }
+}

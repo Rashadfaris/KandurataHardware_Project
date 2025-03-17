@@ -1,0 +1,114 @@
+.leave-form-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .leave-form label {
+    font-weight: bold;
+  }
+  
+  .leave-form input,
+  .leave-form select,
+  .leave-form textarea {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .leave-form .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .leave-form .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .view-leaves-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-leaves-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .leave-table-title {
+    margin-top: 30px;
+  }
+  
+  .leave-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .leave-table th, .leave-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .leave-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .leave-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .leave-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .action-btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .accept-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .decline-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  

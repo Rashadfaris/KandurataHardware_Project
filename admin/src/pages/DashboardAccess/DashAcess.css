@@ -1,0 +1,39 @@
+.Dash-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 88vh; /* Full viewport height */
+    background-color: tomato; /* Tomato orange background */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+  }
+  
+  .dash-message {
+    font-size: 3rem; /* Big font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 2rem; /* Space below the message */
+    color: white;
+  }
+  
+  .dbutton-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem; /* Space between buttons */
+  }
+  
+  .dnav-button {
+    padding: 1rem 2rem; /* Button padding */
+    font-size: 1.5rem; /* Button text size */
+    color: white; /* Button text color */
+    background-color: #ff5722; /* Slightly darker orange for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+  }
+  
+  .dnav-button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+  }

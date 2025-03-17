@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Controls Container */
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+/* Sort Bar Container */
+.sort-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+.assign-driver-btn,
+.back-btn,
+.pdf-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.assign-driver-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 20px;
+}
+
+.back-btn {
+    background-color: #f44336;
+    color: white;
+    margin-left: 20px;
+}
+
+.pdf-btn {
+    background-color: #2196F3;
+    color: white;
+    margin-left: 20px;
+}
+
+.assign-driver-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .search-bar {
+        width: 100px;
+    }
+
+    .controls-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

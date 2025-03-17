@@ -1,0 +1,111 @@
+.list-container {
+  width: 100%;
+  display: flex;
+ 
+  font-family: Arial, sans-serif; /* Ensure a clean, modern font */
+  
+}
+
+.list-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 20px; /* Reduced margin for less spacing */
+}
+
+.price-toggle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.category-filter,
+.search-bar {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 250px; /* Set fixed width */
+}
+
+/* Styling the list table with grid layout */
+.list-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1.5fr 1fr 1fr 0.7fr 0.7fr 0.7fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid #cacaca;
+  font-size: 13px;
+}
+
+.list-table-format.title {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.list-table-format img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.list-table-format .add-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.proceed-button {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Increased margin for better separation */
+}
+
+.list-table-format .add-button:hover,
+.proceed-button:hover {
+  background-color: tomato; /* Hover effect */
+}
+
+/* Sidebar Styling */
+.CashierSidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.CashierSidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.CashierSidebar ul li {
+  margin: 15px 0;
+}
+
+.CashierSidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
