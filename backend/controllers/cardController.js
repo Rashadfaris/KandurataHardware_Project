@@ -1,4 +1,4 @@
-import cardModel from "../models/card.js";
+import cardModel from "../models/Card.js";
 
 // Add a new card (allowing duplicate unique codes)
 const addCard = async (req, res) => {
