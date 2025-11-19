@@ -217,3 +217,101 @@
     transform: translateY(-50%); /* Adjust for perfect centering */
     z-index: 1; /* Ensure it's on top of the input field */
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 4%;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    display: none; /* Hide menu on mobile, can be replaced with hamburger menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .navbar button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .navbar-search {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 2%;
+  }
+
+  .navbar-logo {
+    width: 100px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .navbar button {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  .navbar-search {
+    width: 200px;
+    right: -50px;
+  }
+
+  .navbar-search input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .search-result-item {
+    padding: 8px;
+  }
+
+  .search-result-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-result-item h4 {
+    font-size: 14px;
+  }
+
+  .search-result-item p {
+    font-size: 12px;
+  }
+}

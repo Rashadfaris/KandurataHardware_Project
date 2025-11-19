@@ -28,3 +28,35 @@
 .employee-form button:hover {
     background-color: #45a049;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .employee-form {
+    max-width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .employee-form input,
+  .employee-form select,
+  .employee-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-form {
+    max-width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .employee-form input,
+  .employee-form select,
+  .employee-form button {
+    padding: 10px;
+    font-size: 13px;
+    margin: 8px 0;
+  }
+}

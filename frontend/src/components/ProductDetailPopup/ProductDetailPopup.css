@@ -172,3 +172,101 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-detail-container {
+    width: 90%;
+    max-width: 600px;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .product-detail-left,
+  .product-detail-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .product-detail-image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .product-detail-header h2 {
+    font-size: 20px;
+  }
+
+  .product-detail-header p {
+    font-size: 13px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-to-cart-btn,
+  .view-cart-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-container {
+    width: 95%;
+    padding: 12px;
+    gap: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  .product-detail-header h2 {
+    font-size: 18px;
+  }
+
+  .product-detail-header p {
+    font-size: 12px;
+  }
+
+  .product-detail-pricing {
+    margin: 15px 0;
+  }
+
+  .updated-price {
+    font-size: 16px;
+  }
+
+  .size-selection h3,
+  .quantity-selection h3 {
+    font-size: 14px;
+  }
+
+  .quantity-controls button {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+
+  .quantity-controls span {
+    font-size: 16px;
+  }
+
+  .add-to-cart-btn,
+  .view-cart-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .out-of-stock-message {
+    font-size: 14px;
+  }
+}

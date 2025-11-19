@@ -144,3 +144,97 @@
 .supplier-dropdown li:hover {
     background-color: #f0f0f0; /* Highlight on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .PrdAddSidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .PrdAddSidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .add-container {
+    padding: 15px;
+  }
+
+  .add {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .add-product-name,
+  .add-product-description,
+  .add-product-id,
+  .add-supplier-name,
+  .add-date {
+    width: 100%;
+  }
+
+  .add-category-price-quantity {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-category-price-quantity select,
+  .add-category-price-quantity input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .PrdAddSidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .PrdAddSidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .PrdAddSidebar ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .add {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .add-img-upload img {
+    width: 100px;
+  }
+
+  .add-btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add {
+    font-size: 12px;
+  }
+
+  .add-img-upload img {
+    width: 80px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

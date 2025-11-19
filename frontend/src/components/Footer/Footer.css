@@ -3,9 +3,12 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 20px 8vw; /* Adjust if needed */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 20px 8vw;
     gap: 20px;
     padding-top: 80px;
+    box-sizing: border-box;
 }
 
 .footer-container {
@@ -84,4 +87,121 @@
 
 .social-icon:hover {
     transform: scale(1.1); /* Scale up icon on hover */
+}
+
+/* Footer Bottom Section */
+.ifooter-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ifooter-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 20px 4vw;
+    padding-top: 60px;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .ifooter-section {
+    min-width: 180px;
+  }
+
+  .ifooter-bottom {
+    padding: 8px 0;
+  }
+
+  .ifooter-bottom p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 3vw;
+    padding-top: 40px;
+    gap: 15px;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ifooter-section {
+    min-width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer .ifooter-section.description p,
+  .footer .ifooter-section.contact p {
+    text-align: center;
+  }
+
+  .ifooter-section {
+    text-align: center;
+  }
+
+  .ifooter-bottom {
+    padding: 8px 0;
+  }
+
+  .ifooter-bottom p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 2vw;
+    padding-top: 30px;
+    gap: 10px;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .footer-logo {
+    max-width: 80%;
+  }
+
+  .ifooter-section h3 {
+    font-size: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .ifooter-section ul li {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .social-icon {
+    width: 25px;
+    margin: 0 8px;
+  }
+
+  .ifooter-bottom {
+    padding: 8px 0;
+  }
+
+  .ifooter-bottom p {
+    font-size: 12px;
+  }
 }

@@ -29,3 +29,39 @@
 .sign-out-button:hover {
     background-color: #d32f2f; /* Darker red on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 2%;
+    flex-wrap: wrap;
+  }
+
+  .navbar.logo {
+    width: max(15%, 60px);
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .sign-out-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 2%;
+  }
+
+  .navbar.logo {
+    width: 50px;
+  }
+
+  .sign-out-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}

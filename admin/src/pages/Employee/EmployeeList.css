@@ -90,3 +90,57 @@ tr:hover {
 .edit-form button:hover {
     background-color: #45a049;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .employee-list {
+    max-width: 95%;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-list {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

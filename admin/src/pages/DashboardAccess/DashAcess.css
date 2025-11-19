@@ -37,3 +37,39 @@
   .dnav-button:hover {
     background-color: #e64a19; /* Darker orange on hover */
   }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Dash-page {
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  .dash-message {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dbutton-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .dnav-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-message {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .dnav-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}

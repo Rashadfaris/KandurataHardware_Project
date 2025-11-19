@@ -151,3 +151,90 @@ button.place-order:hover {
 .payment-method-selection input {
   margin-right: 10px; /* Space between radio button and label */
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .place-order {
+    gap: 30px;
+    margin-top: 80px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .place-order-left .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .place-order-left .multi-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .place-order-left input,
+  .place-order-left select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .payment-method-selection {
+    margin-top: 15px;
+    padding: 8px;
+  }
+
+  .payment-method-selection label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .place-order-left .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .place-order-left input,
+  .place-order-left select {
+    font-size: 13px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .error {
+    font-size: 0.75rem;
+  }
+}

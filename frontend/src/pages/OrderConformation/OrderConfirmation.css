@@ -40,4 +40,67 @@
   .order-confirmation button:hover {
     background-color: #45a049;
   }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-confirmation {
+    padding: 1.5rem;
+  }
+
+  .order-confirmation h1 {
+    font-size: 24px;
+  }
+
+  .order-confirmation p {
+    font-size: 1rem;
+  }
+
+  .order-details {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .order-details th,
+  .order-details td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .order-confirmation button {
+    padding: 0.4rem 0.8rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-confirmation {
+    padding: 1rem;
+  }
+
+  .order-confirmation h1 {
+    font-size: 20px;
+  }
+
+  .order-confirmation p {
+    font-size: 0.9rem;
+  }
+
+  .order-details {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .order-details th,
+  .order-details td {
+    padding: 4px;
+    font-size: 11px;
+  }
+
+  .order-confirmation button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 13px;
+  }
+}
   

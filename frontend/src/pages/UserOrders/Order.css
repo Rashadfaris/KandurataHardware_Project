@@ -102,5 +102,40 @@
 
   .items-list li {
     padding: 8px; /* Smaller padding for list items on mobile */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-container {
+    width: 98%;
+    padding: 15px;
+  }
+
+  .order-container h2 {
+    font-size: 20px;
+  }
+
+  .order-item {
+    padding: 8px;
+  }
+
+  .order-item p {
+    font-size: 14px;
+  }
+
+  .order-item h4 {
+    font-size: 14px;
+  }
+
+  .items-list li {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .no-orders {
+    font-size: 16px;
   }
 }

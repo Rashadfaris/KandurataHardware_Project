@@ -112,4 +112,79 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form1 {
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+  }
+
+  .modal {
+    width: 95%;
+    max-width: 600px;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form1 {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .modal {
+    width: 98%;
+    padding: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  input, select, textarea {
+    font-size: 13px;
+    padding: 6px;
+    margin-bottom: 12px;
+  }
+
+  textarea {
+    height: 60px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .close-modal {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
   

@@ -50,4 +50,46 @@
     text-decoration: underline;
   }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .list-container {
+    flex-direction: column;
+  }
+
+  .SalesSidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .SalesSidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SalesSidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .SalesSidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .SalesSidebar ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SalesSidebar ul li a {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
   

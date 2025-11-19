@@ -13,5 +13,44 @@
     margin-top: 30px;
     gap:30px;
     row-gap: 50px;
+    align-items: stretch;
   }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-display {
+    margin-top: 20px;
+  }
+
+  .product-display h2 {
+    font-size: 20px;
+  }
+
+  .product-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    row-gap: 25px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-display h2 {
+    font-size: 18px;
+  }
+
+  .product-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    row-gap: 20px;
+  }
+}
   

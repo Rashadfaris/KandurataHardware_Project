@@ -71,3 +71,54 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-popup-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px 25px;
+    gap: 20px;
+  }
+
+  .login-popup-input {
+    gap: 15px;
+  }
+
+  .login-popup-input input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .login-popup-container button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-popup-container {
+    width: 95%;
+    padding: 15px 20px;
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .login-popup-title {
+    font-size: 16px;
+  }
+
+  .login-popup-input input {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .login-popup-container button {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .login-popup-condition {
+    font-size: 11px;
+  }
+}

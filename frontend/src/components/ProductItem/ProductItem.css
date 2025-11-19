@@ -5,17 +5,34 @@
     box-shadow: 0px 0px 10px #00000015;
     transition: 0.3s;
     animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.product-item-image-container{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f5f5f5;
 }
 
 .product-item-image{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 15px 15px 0px 0px;
-
 }
 
 .product-item-info{
     padding: 20px;
-
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 150px;
 }
 
 .product-item-name-rating{
@@ -40,7 +57,14 @@
 .product-item-desc{
     color: #676767;
     font-size: 12px;
-
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    line-height: 1.4;
 }
 
 .product-item-price{
@@ -50,9 +74,6 @@
     margin: 10px 0px;
 }
 
-.product-item-image-container{
-    position: relative;
-}
 
 .product-item-image-container .add{
     width: 35px;
@@ -78,4 +99,86 @@
 
 .product-item-counter img{
     width:30px
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-item-image-container {
+    height: 200px;
+  }
+
+  .product-item-info {
+    padding: 15px;
+    min-height: 130px;
+  }
+
+  .product-item-name-rating p {
+    font-size: 16px;
+  }
+
+  .product-item-name-rating img {
+    width: 50px;
+  }
+
+  .product-item-desc {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+  }
+
+  .product-item-price {
+    font-size: 18px;
+  }
+
+  .product-item-image-container .add {
+    width: 30px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .product-item-counter {
+    bottom: 10px;
+    right: 10px;
+    padding: 4px;
+    gap: 8px;
+  }
+
+  .product-item-counter img {
+    width: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-item-image-container {
+    height: 180px;
+  }
+
+  .product-item-info {
+    padding: 12px;
+    min-height: 120px;
+  }
+
+  .product-item-name-rating p {
+    font-size: 14px;
+  }
+
+  .product-item-name-rating img {
+    width: 40px;
+  }
+
+  .product-item-desc {
+    font-size: 10px;
+    -webkit-line-clamp: 2;
+  }
+
+  .product-item-price {
+    font-size: 16px;
+  }
+
+  .product-item-image-container .add {
+    width: 25px;
+  }
+
+  .product-item-counter img {
+    width: 20px;
+  }
 }

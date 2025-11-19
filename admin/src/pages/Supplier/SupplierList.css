@@ -184,3 +184,115 @@
 .btn-delete:hover {
     background-color: tomato;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .supplier-list-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .form-search {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-control {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .table {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .supplier-list-content {
+    padding: 15px;
+  }
+
+  .users-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-search {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .btn-add {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .btn-warning {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .table th {
+    font-size: 16px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .supplier-list-content {
+    padding: 10px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .table th {
+    font-size: 14px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn-add,
+  .btn-warning {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 12px;
+    height: 28px;
+  }
+}

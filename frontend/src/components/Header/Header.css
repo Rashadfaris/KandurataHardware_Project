@@ -43,3 +43,75 @@
     border-radius: 50px;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    height: 40vw;
+  }
+
+  .header-contents {
+    max-width: 60%;
+    left: 4vw;
+  }
+
+  .header-contents h2 {
+    font-size: max(3.5vw, 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 50vw;
+    margin: 20px auto;
+  }
+
+  .header-contents {
+    max-width: 70%;
+    left: 3vw;
+    bottom: 8%;
+    gap: 1vw;
+  }
+
+  .header-contents h2 {
+    font-size: max(3vw, 18px);
+  }
+
+  .header-contents p {
+    font-size: 1.2vw;
+  }
+
+  .header-contents button {
+    padding: 0.8vw 2vw;
+    font-size: max(1.2vw, 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60vw;
+    margin: 15px auto;
+    border-radius: 10px;
+  }
+
+  .header-contents {
+    max-width: 85%;
+    left: 2vw;
+    bottom: 5%;
+    gap: 0.8vw;
+  }
+
+  .header-contents h2 {
+    font-size: max(2.5vw, 16px);
+  }
+
+  .header-contents p {
+    font-size: 1.5vw;
+    display: none; /* Hide description on very small screens */
+  }
+
+  .header-contents button {
+    padding: 0.6vw 1.5vw;
+    font-size: max(1.5vw, 11px);
+  }
+}
+
