@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import API_ENDPOINTS from '../../config/api.js';
 
 const EditInquiryForm = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const EditInquiryForm = () => {
   useEffect(() => {
     const fetchInquiry = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/inquiries/${id}`);
+        const response = await axios.get(API_ENDPOINTS.INQUIRIES.GET_BY_ID(id));
         setInquiry(response.data.inquiry);
       } catch (error) {
         console.error("Error fetching inquiry:", error);
@@ -34,7 +35,7 @@ const EditInquiryForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5001/inquiries/${id}`, inquiry);
+      await axios.put(API_ENDPOINTS.INQUIRIES.UPDATE(id), inquiry);
       toast.success("Inquiry updated successfully!");
       navigate("/queries"); // Redirect to the User Queries page
     } catch (error) {

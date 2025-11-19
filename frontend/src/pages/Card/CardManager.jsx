@@ -1,9 +1,10 @@
 import axios from 'axios';
+import API_ENDPOINTS from '../../config/api.js';
 
 // Exported fetchCardByCode function
 export const fetchCardByCode = async (uniqueCode) => {
     try {
-        const response = await axios.get(`http://localhost:5001/api/cards/code/${uniqueCode}`);
+        const response = await axios.get(API_ENDPOINTS.CARDS.GET_BY_CODE(uniqueCode));
         console.log('Response data:', response.data);
         return response.data.cards; // Return the cards array
     } catch (error) {
@@ -33,7 +34,7 @@ const Card = () => {
         try {
             const payload = { cardNumber, cardHolderName, expiryDate, cardType, uniqueCode };
             console.log('Adding Card:', payload);
-            const response = await axios.post('http://localhost:5001/api/cards', payload);
+            const response = await axios.post(API_ENDPOINTS.CARDS.ADD, payload);
             console.log('Card added response:', response.data);
             alert('Card added successfully!');
             resetForm();
@@ -63,7 +64,7 @@ const Card = () => {
 
     const handleDeleteCard = async (cardId) => {
         try {
-            await axios.delete(`http://localhost:5001/api/cards/${cardId}`);
+            await axios.delete(API_ENDPOINTS.CARDS.DELETE(cardId));
             setCards(cards.filter(card => card._id !== cardId));
             alert('Card deleted successfully!');
         } catch (error) {
@@ -74,7 +75,7 @@ const Card = () => {
 
     const updateCard = async (updatedCardData) => {
         try {
-            const response = await axios.put(`http://localhost:5001/api/cards/${editCardId}`, updatedCardData);
+            const response = await axios.put(API_ENDPOINTS.CARDS.UPDATE(editCardId), updatedCardData);
             console.log('Card updated response:', response.data);
             alert('Card updated successfully!');
             resetForm();

@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ProductDetailPopup.css';
 import { StoreContext } from '../../context/StoreContext';
+import API_ENDPOINTS from '../../config/api.js';
 
 const ProductDetailPopup = ({ product, onClose }) => {
     const { addToCart } = useContext(StoreContext);
@@ -65,7 +66,7 @@ const ProductDetailPopup = ({ product, onClose }) => {
                 <div className="product-detail-left">
                     <img 
                         className="product-detail-image" 
-                        src={`http://localhost:5001/images/${product.image}`} 
+                        src={API_ENDPOINTS.IMAGES.GET(product.image)} 
                         alt={product.name} 
                     />
                     <div className="product-info-small">Materials, Care and Origin</div>

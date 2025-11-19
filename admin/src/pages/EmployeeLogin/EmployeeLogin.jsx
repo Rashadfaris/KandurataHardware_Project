@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './EmployeeLogin.css'; // Ensure correct CSS path
+import './EmployeeLogin.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const EmployeeLogin = () => {
     const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ const EmployeeLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5001/api/employees/login', { email: username, password });
+            const response = await axios.post(API_ENDPOINTS.EMPLOYEES.LOGIN, { email: username, password });
             const { token, role, user } = response.data;
 
             // Save token and role to local storage

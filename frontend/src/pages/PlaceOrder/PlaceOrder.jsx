@@ -4,6 +4,7 @@ import { StoreContext } from '../../context/StoreContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { fetchCardByCode } from "../Card/CardManager";
+import API_ENDPOINTS from '../../config/api.js';
 
 
 const PlaceOrder = () => {
@@ -71,7 +72,7 @@ const PlaceOrder = () => {
   const decreaseQuantity = async (productId, quantity) => {
     try {
       const response = await axios.post(
-        'http://localhost:5001/api/product/decrease-quantity',
+        API_ENDPOINTS.PRODUCTS.DECREASE_QUANTITY,
         { productId, quantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -118,7 +119,7 @@ const PlaceOrder = () => {
   
       try {
         const response = await axios.post(
-          'http://localhost:5001/api/orders/place',
+          API_ENDPOINTS.ORDERS.PLACE,
           orderData,
           { headers: { Authorization: `Bearer ${token}` } }
         );

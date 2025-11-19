@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../context/StoreContext';
-import './Order.css'; // Ensure this path is correct
+import './Order.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const UserOrders = () => {
     const { token } = useContext(StoreContext);
@@ -9,7 +10,7 @@ const UserOrders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch('http://localhost:5001/api/orders', {
+                const response = await fetch(API_ENDPOINTS.ORDERS.GET_USER_ORDERS, {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ProductDisplay.css';
 import ProductItem from '../ProductItem/ProductItem';
 import ProductDetailPopup from '../ProductDetailPopup/ProductDetailPopup';
+import API_ENDPOINTS from '../../config/api.js';
 
 const ProductDisplay = ({ category, products, scrollToProduct }) => { // Accept scrollToProduct as prop
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -27,7 +28,7 @@ const ProductDisplay = ({ category, products, scrollToProduct }) => { // Accept 
                                 name={item.name}
                                 description={item.description}
                                 price={item.retailPrice}
-                                image={`http://localhost:5001/images/${item.image}`} // Ensure the image path is correct
+                                image={API_ENDPOINTS.IMAGES.GET(item.image)}
                                 onClick={() => {
                                     handleProductClick(item._id);
                                     scrollToProduct(item._id); // Scroll to the clicked product

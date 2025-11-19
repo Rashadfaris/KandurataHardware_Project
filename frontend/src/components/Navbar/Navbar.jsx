@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 import microphone_icon from '../../assets/microphone.png';
+import API_ENDPOINTS from '../../config/api.js';
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = SpeechRecognition ? new SpeechRecognition() : null;
@@ -112,7 +113,7 @@ const Navbar = ({ setShowLogin, scrollToProduct }) => {
                   <li key={product._id} className='search-result-item' onClick={() => {
                     scrollToProduct(product._id); // Use scrollToProduct to scroll to the product
                   }}>
-                    <img src={`http://localhost:5001/images/${product.image}`} alt={product.name} className='search-result-image' />
+                    <img src={API_ENDPOINTS.IMAGES.GET(product.image)} alt={product.name} className='search-result-image' />
                     <div>
                       <h4>{product.name}</h4>
                     </div>

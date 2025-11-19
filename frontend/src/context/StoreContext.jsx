@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import API_ENDPOINTS from "../config/api.js";
 
 export const StoreContext = createContext(null);
 
@@ -9,7 +10,7 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("");
     const [userId, setUserId] = useState("");
     
-    const url = "http://localhost:5001"; // Replace with your actual backend URL
+    const url = API_ENDPOINTS.BASE_URL;
 
 
     
@@ -28,9 +29,9 @@ const StoreContextProvider = (props) => {
         if (token) {
             try {
                 await axios.post(
-                    `${url}/api/cart/add`,
+                    API_ENDPOINTS.CART.ADD,
                     { itemId, size, name: productName },
-                    { headers: { Authorization: `Bearer ${token}` } } // Include Bearer prefix if needed
+                    { headers: { Authorization: `Bearer ${token}` } }
                 );
             } catch (error) {
                 console.error("Error adding item to cart:", error);
@@ -59,7 +60,7 @@ const StoreContextProvider = (props) => {
 
         if (token) {
             try {
-                await axios.post(`${url}/api/cart/remove`, { itemId }, { headers: { token } });
+                await axios.post(API_ENDPOINTS.CART.REMOVE, { itemId }, { headers: { token } });
             } catch (error) {
                 console.error("Error removing item from cart:", error);
             }
@@ -69,7 +70,7 @@ const StoreContextProvider = (props) => {
     // Fetch the product list from the API
     const fetchProductList = async () => {
         try {
-            const response = await axios.get(`${url}/api/product/list`);
+            const response = await axios.get(API_ENDPOINTS.PRODUCTS.LIST);
             setFeaturedProducts(response.data.data); // Assuming your API returns products in data.data
         } catch (error) {
             console.error("Error fetching product list:", error);
@@ -79,7 +80,7 @@ const StoreContextProvider = (props) => {
     // Load cart data for the user and extract user ID from the response
     const loadCartData = async (token) => {
         try {
-            const response = await axios.post(`${url}/api/cart/get`, {}, { headers: { Authorization: `Bearer ${token}` } });
+            const response = await axios.post(API_ENDPOINTS.CART.GET, {}, { headers: { Authorization: `Bearer ${token}` } });
             setCartItems(response.data.cartData);
             const userIdFromResponse = response.data.userId; // Assuming your API response includes the userId
             setUserId(userIdFromResponse); // Set user ID from the response
@@ -110,7 +111,7 @@ const StoreContextProvider = (props) => {
     
         try {
             console.log("Fetching user orders...");
-            const response = await axios.get(`${url}/api/orders`, {
+            const response = await axios.get(API_ENDPOINTS.ORDERS.GET_USER_ORDERS, {
                 headers: { Authorization: `Bearer ${token}` },
             });
     

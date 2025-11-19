@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import "./contactUsForm.css";
+import API_ENDPOINTS from '../../config/api.js';
 import { Card } from "@mui/material"; // Optional import if you're using Card component
 import { createNotify } from "./ToastMessages"; // Custom notification function
 import { Bounce, ToastContainer } from "react-toastify"; // Toast notifications
@@ -59,7 +60,7 @@ const ContactUsForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/inquiries",
+        API_ENDPOINTS.INQUIRIES.CREATE,
         formData
       );
       createNotify("Inquiry submitted successfully!"); // Show success notification

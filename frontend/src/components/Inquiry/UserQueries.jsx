@@ -3,7 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import './UserQueries.css'; 
+import './UserQueries.css';
+import API_ENDPOINTS from '../../config/api.js'; 
 
 const UserQueries = () => {
   const [inquiries, setInquiries] = useState([]);
@@ -14,7 +15,7 @@ const UserQueries = () => {
   useEffect(() => {
     const fetchInquiries = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/inquiries");
+        const response = await axios.get(API_ENDPOINTS.INQUIRIES.GET_ALL);
         setInquiries(response.data.inquiries);
       } catch (error) {
         console.error("Error fetching inquiries:", error);
@@ -26,7 +27,7 @@ const UserQueries = () => {
 
     const fetchReplies = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/replies");
+        const response = await axios.get(API_ENDPOINTS.REPLIES.GET_ALL);
         setReplies(response.data.replies || []);
       } catch (error) {
         console.error("Error fetching replies:", error);
@@ -45,7 +46,7 @@ const UserQueries = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this inquiry?")) {
       try {
-        await axios.delete(`http://localhost:5001/inquiries/${id}`);
+        await axios.delete(API_ENDPOINTS.INQUIRIES.DELETE(id));
         toast.success("Inquiry deleted successfully!");
         setInquiries(inquiries.filter((inquiry) => inquiry._id !== id));
       } catch (error) {
