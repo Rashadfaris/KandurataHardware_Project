@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import toast, { Toaster } from "react-hot-toast";
-import './HRManagerQueries.css';
+import './hrManagerQueries.css';
 
 const HrManagerDashboard = () => {
   const [queries, setQueries] = useState([]);
