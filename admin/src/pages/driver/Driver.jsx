@@ -1,13 +1,14 @@
 // Driver.jsx
 
 import React, { useEffect, useState } from 'react';
+import { buildUrl } from '../../config/api.js';
 
 const Driver = () => {
     const [orders, setOrders] = useState([]);
 
     const fetchOrders = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/orders');
+            const response = await fetch(buildUrl('/api/orders'));
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

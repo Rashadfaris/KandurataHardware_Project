@@ -2,19 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import './SupplierComponent.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const SupplierComponent = () => {
   const navigate = useNavigate();
   const [lowStockProducts, setLowStockProducts] = useState([]);
   const [suppliers, setSuppliers] = useState([]); // State to store suppliers with emails
 
-  const productUrl = "http://localhost:5001/api/product";
-  const supplierUrl = "http://localhost:5001/api/suppliers/getSuppliers";
-
   // Fetch low stock products
   const fetchLowStockProducts = async () => {
     try {
-      const response = await axios.get(`${productUrl}/list`);
+      const response = await axios.get(API_ENDPOINTS.PRODUCTS.LIST);
       if (response.data.success) {
         const alerts = response.data.data.filter(product => product.quantity <= 5);
         setLowStockProducts(alerts);
@@ -27,7 +25,7 @@ const SupplierComponent = () => {
   // Fetch supplier emails
   const fetchSuppliers = async () => {
     try {
-      const response = await axios.get(supplierUrl);
+      const response = await axios.get(API_ENDPOINTS.SUPPLIERS.LIST);
       if (response.data) {
         setSuppliers(response.data); // Set supplier data with emails
       }

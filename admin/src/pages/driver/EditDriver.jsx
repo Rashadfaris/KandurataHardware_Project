@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './EditDriver.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const EditDriver = ({ driver, closeModal, fetchDrivers }) => {
   const [firstName, setFirstName] = useState(driver.firstName || '');
@@ -23,7 +24,7 @@ const EditDriver = ({ driver, closeModal, fetchDrivers }) => {
     }
 
     try {
-      await axios.put(`http://localhost:5001/drivers/${driver._id}`, {
+      await axios.put(API_ENDPOINTS.DRIVERS.BY_ID(driver._id), {
         firstName,
         lastName,
         vehicleModel,

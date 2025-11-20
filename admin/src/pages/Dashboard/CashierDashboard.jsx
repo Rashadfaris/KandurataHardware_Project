@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import { useNavigate, useLocation } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import './CashierDashboard.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const List = () => {
-  const url = "http://localhost:5001";
+  const url = API_ENDPOINTS.BASE_URL;
   const [list, setList] = useState([]);
   const [invoiceItems, setInvoiceItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,7 +20,7 @@ const List = () => {
   // Fetch product list
   const fetchList = async () => {
     try {
-      const response = await axios.get(`${url}/api/product/list`);
+      const response = await axios.get(API_ENDPOINTS.PRODUCTS.LIST);
       if (response.data.success) {
         setList(response.data.data);
         const uniqueCategories = [...new Set(response.data.data.map(item => item.category))];
@@ -146,7 +146,7 @@ const List = () => {
           {filteredList.length > 0 ? (
             filteredList.map((item, index) => (
               <div key={index} className='list-table-format'>
-                <img src={`${url}/images/` + item.image} alt={item.name} />
+                <img src={`${API_ENDPOINTS.IMAGES.BASE}/` + item.image} alt={item.name} />
                 <p>{item.name}</p>
                 <p>{item.category || "No category"}</p>
                 <p>{item.wholesalePrice || "No wholesale price"}</p>

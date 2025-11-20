@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import jsPDF from 'jspdf'; // Import jsPDF
+import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import './AssignedOrders.css';
+import { buildUrl } from '../../config/api.js';
 
 const AssignedOrders = () => {
     const location = useLocation();
@@ -33,7 +34,7 @@ const AssignedOrders = () => {
     const handleReadyToShip = async () => {
         try {
             const promises = selectedOrders.map((id) =>
-                fetch(`http://localhost:5001/api/${id}`, {
+                fetch(buildUrl(`/api/${id}`), {
                     method: 'DELETE',
                 })
             );

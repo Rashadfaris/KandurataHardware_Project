@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import EditDriver from './EditDriver'; // Import the EditDriver component
+import EditDriver from './EditDriver';
 import './DriverList.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const DriverList = () => {
   const [drivers, setDrivers] = useState([]);
@@ -12,7 +13,7 @@ const DriverList = () => {
 
   const fetchDrivers = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/drivers');
+      const response = await axios.get(API_ENDPOINTS.DRIVERS.BASE);
       setDrivers(response.data);
     } catch (error) {
       console.error('Error fetching drivers:', error);
@@ -27,7 +28,7 @@ const DriverList = () => {
   const deleteDriver = async () => {
     if (driverToDelete) {
       try {
-        await axios.delete(`http://localhost:5001/drivers/${driverToDelete}`);
+        await axios.delete(API_ENDPOINTS.DRIVERS.BY_ID(driverToDelete));
         fetchDrivers(); // Refresh the list after deletion
       } catch (error) {
         console.error('Error deleting driver:', error);

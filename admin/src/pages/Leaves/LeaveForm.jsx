@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './LeaveForm.css'; // Add styles for modal
+import './LeaveForm.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const LeaveForm = () => {
   const [formData, setFormData] = useState({
@@ -35,11 +36,11 @@ const LeaveForm = () => {
     try {
       if (editingId) {
         // Update existing leave request
-        await axios.put(`http://localhost:5001/api/leaves/${editingId}`, formData);
+        await axios.put(API_ENDPOINTS.LEAVES.BY_ID(editingId), formData);
         alert('Leave request updated successfully');
       } else {
         // Create a new leave request
-        await axios.post('http://localhost:5001/api/leaves', formData);
+        await axios.post(API_ENDPOINTS.LEAVES.BASE, formData);
         alert('Leave request submitted successfully');
       }
       fetchLeaves();
@@ -60,7 +61,7 @@ const LeaveForm = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get(`http://localhost:5001/api/leaves?role=${userRole}`);
+      const response = await axios.get(API_ENDPOINTS.LEAVES.BY_ROLE(userRole));
       setLeaves(response.data);
     } catch (error) {
       console.error('Error fetching leave requests:', error);
@@ -87,7 +88,7 @@ const LeaveForm = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/leaves/${id}`);
+      await axios.delete(API_ENDPOINTS.LEAVES.BY_ID(id));
       alert('Leave request deleted successfully');
       fetchLeaves();
     } catch (error) {
@@ -98,7 +99,7 @@ const LeaveForm = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5001/api/leaves/${id}`, { status });
+      await axios.put(API_ENDPOINTS.LEAVES.BY_ID(id), { status });
       fetchLeaves();
     } catch (error) {
       console.error('Error updating leave request status:', error);

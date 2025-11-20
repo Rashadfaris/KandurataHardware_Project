@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify'; // Import ToastContainer and toast
-import 'react-toastify/dist/ReactToastify.css'; // Import CSS for Toastify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const EditEmployee = () => {
   const { id } = useParams();
@@ -20,7 +21,7 @@ const EditEmployee = () => {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await fetch(`http://localhost:5001/api/employees/${id}`);
+        const response = await fetch(API_ENDPOINTS.EMPLOYEES.BY_ID(id));
         if (!response.ok) throw new Error('Employee not found');
         const data = await response.json();
         setEmployee({
@@ -46,7 +47,7 @@ const EditEmployee = () => {
       tempErrors.nic = 'NIC format is invalid';
     } else {
       try {
-        const nicCheck = await fetch(`http://localhost:5001/api/employees/check-nic/${employee.nic}`);
+        const nicCheck = await fetch(API_ENDPOINTS.EMPLOYEES.CHECK_NIC(employee.nic));
         if (!nicCheck.ok) throw new Error('NIC check failed');
         const nicExists = await nicCheck.json();
         if (nicExists && nicExists.id !== id) {
@@ -83,7 +84,7 @@ const EditEmployee = () => {
     e.preventDefault();
     if (await validate()) {
       try {
-        const response = await fetch(`http://localhost:5001/api/employees/${id}`, {
+        const response = await fetch(API_ENDPOINTS.EMPLOYEES.BY_ID(id), {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable'; // Make sure to install this for table support
+import 'jspdf-autotable';
 import './EmployeeList.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const EmployeeList = () => {
     const [employees, setEmployees] = useState([]);
@@ -14,7 +15,7 @@ const EmployeeList = () => {
 
     useEffect(() => {
         const fetchEmployees = async () => {
-            const response = await fetch('http://localhost:5001/api/employees');
+            const response = await fetch(API_ENDPOINTS.EMPLOYEES.BASE);
             const data = await response.json();
             setEmployees(data);
         };
@@ -22,7 +23,7 @@ const EmployeeList = () => {
     }, []);
 
     const handleDelete = async (id) => {
-        const response = await fetch(`http://localhost:5001/api/employees/${id}`, { method: 'DELETE' });
+        const response = await fetch(API_ENDPOINTS.EMPLOYEES.BY_ID(id), { method: 'DELETE' });
         if (response.ok) {
             setEmployees(employees.filter(emp => emp._id !== id));
             toast.success('Employee deleted successfully!', {

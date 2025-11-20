@@ -6,6 +6,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { createNotify } from "./ToastMessages";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ListAltIcon from '@mui/icons-material/ListAlt';
+import API_ENDPOINTS from "../../config/api.js";
 
 const ReplyForm = () => {
   const { id } = useParams(); // Get the inquiry ID from URL parameters
@@ -21,7 +22,7 @@ const ReplyForm = () => {
     const fetchInquiry = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/inquiries/${id}`
+          API_ENDPOINTS.INQUIRIES.BY_ID(id)
         );
 
         console.log(response,"Response");
@@ -46,7 +47,7 @@ const ReplyForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post(`http://localhost:5001/replies`, {
+      await axios.post(API_ENDPOINTS.REPLIES.BASE, {
         inquiryId: id,
         username,
         replyMessage,

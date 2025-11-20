@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify'; 
-import 'react-toastify/dist/ReactToastify.css'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './UpdateSupplier.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const UpdateSupplier = () => {
     const { id } = useParams(); 
@@ -19,7 +20,7 @@ const UpdateSupplier = () => {
     useEffect(() => {
         const fetchSupplier = async () => {
             try {
-                const response = await axios.get(`http://localhost:5001/api/suppliers/getSupplierById/${id}`);
+                const response = await axios.get(API_ENDPOINTS.SUPPLIERS.BY_ID(id));
                 setSupplier(response.data);
             } catch (error) {
                 setError('Failed to fetch supplier details');
@@ -36,7 +37,7 @@ const UpdateSupplier = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5001/api/suppliers/updateSupplier/${id}`, supplier);
+            await axios.put(API_ENDPOINTS.SUPPLIERS.UPDATE(id), supplier);
             toast.success('Supplier updated successfully!'); 
             setTimeout(() => {
                 navigate('/listSupplier'); 

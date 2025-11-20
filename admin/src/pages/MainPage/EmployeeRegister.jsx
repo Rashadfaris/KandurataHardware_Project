@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './EmployeeRegister.css'
+import './EmployeeRegister.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const EmployeeRegister = () => {
     const [name, setName] = useState('');
@@ -11,7 +12,7 @@ const EmployeeRegister = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5001/api/employees/register', { name, email, password, role });
+            await axios.post(API_ENDPOINTS.EMPLOYEES.REGISTER, { name, email, password, role });
             alert("Employee registered successfully");
             // Optionally, redirect to login page or clear form
         } catch (error) { 

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import SalesGraph from "../../components/SalesGraph/SalesGraph";
 import RevenueGraph from "../../components/Revenue/RevenueGraph";
-import notiIcon from '../../assets/noti_icon.jpeg'; 
+import notiIcon from '../../assets/noti_icon.jpeg';
 import './AdminDashboard.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 
 const AdminDashboard = ({ totalOrders }) => { // Accept totalOrders as a prop
@@ -15,7 +16,7 @@ const AdminDashboard = ({ totalOrders }) => { // Accept totalOrders as a prop
   useEffect(() => {
     const fetchUserCount = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/user/count');
+        const response = await axios.get(API_ENDPOINTS.USERS.COUNT);
         if (response.data.success) {
           setUserCount(response.data.count);
         } else {
@@ -28,7 +29,7 @@ const AdminDashboard = ({ totalOrders }) => { // Accept totalOrders as a prop
 
     const fetchLowStockAlerts = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/product/list'); 
+        const response = await axios.get(API_ENDPOINTS.PRODUCTS.LIST);
         if (response.data.success) {
           const alerts = response.data.data.filter(product => product.quantity <= 5);
           setLowStockAlerts(alerts);

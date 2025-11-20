@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import './UserTable.css';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
@@ -12,7 +13,7 @@ const UserTable = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/user/all');
+        const response = await fetch(API_ENDPOINTS.USERS.LIST);
         const data = await response.json();
         if (data.success) {
           setUsers(data.users); // Update the state with the fetched users
@@ -29,7 +30,7 @@ const UserTable = () => {
 
   const deleteUser = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/user/${userId}`, {
+      const response = await fetch(API_ENDPOINTS.USERS.BY_ID(userId), {
         method: 'DELETE',
       });
       const data = await response.json();

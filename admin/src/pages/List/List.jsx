@@ -8,8 +8,9 @@ import Papa from 'papaparse';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import './List.css';
-import notiIcon from '../../assets/noti_icon.jpeg'; // Import your notification icon
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import notiIcon from '../../assets/noti_icon.jpeg';
+import { Link } from 'react-router-dom';
+import API_ENDPOINTS from '../../config/api.js';
 
 const List = () => {
   const [products, setProducts] = useState([]);
@@ -21,11 +22,9 @@ const List = () => {
   const [lowStockAlerts, setLowStockAlerts] = useState([]); // State for low stock alerts
   const [showAlertsPopup, setShowAlertsPopup] = useState(false); // State to toggle popup
  
-  const url = "http://localhost:5001/api/product";
-
   const fetchProducts = async () => {
     try {
-      const response = await axios.get(`${url}/list`);
+      const response = await axios.get(API_ENDPOINTS.PRODUCTS.LIST);
       if (response.data.success) {
         setProducts(response.data.data);
         const uniqueSuppliers = Array.from(new Set(response.data.data.map(product => product.supplierName)));
@@ -66,7 +65,7 @@ const List = () => {
           label: 'Yes',
           onClick: async () => {
             try {
-              const response = await axios.post(`${url}/remove`, { id });
+              const response = await axios.post(API_ENDPOINTS.PRODUCTS.REMOVE, { id });
               if (response.data.success) {
                 confirmAlert({
                   title: 'Deleted',

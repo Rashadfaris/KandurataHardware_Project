@@ -5,6 +5,7 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 import toast, { Toaster } from "react-hot-toast";
 import './hrManagerQueries.css';
+import API_ENDPOINTS from "../../config/api.js";
 
 const HrManagerDashboard = () => {
   const [queries, setQueries] = useState([]);
@@ -16,7 +17,7 @@ const HrManagerDashboard = () => {
   useEffect(() => {
     const fetchQueries = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/inquiries");
+        const response = await axios.get(API_ENDPOINTS.INQUIRIES.BASE);
         setQueries(response.data.inquiries || []);
       } catch (error) {
         console.error("Error fetching inquiries:", error);
@@ -25,7 +26,7 @@ const HrManagerDashboard = () => {
 
     const fetchReplies = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/replies");
+        const response = await axios.get(API_ENDPOINTS.REPLIES.BASE);
         setReplies(response.data.replies || []);
       } catch (error) {
         console.error("Error fetching replies:", error);
@@ -34,7 +35,7 @@ const HrManagerDashboard = () => {
 
     const fetchLeaves = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/leaves");
+        const response = await axios.get(API_ENDPOINTS.LEAVES.BASE);
         setLeaves(response.data || []);
       } catch (error) {
         console.error("Error fetching leave requests:", error);
@@ -54,7 +55,7 @@ const HrManagerDashboard = () => {
   // Delete an inquiry by ID
   const deleteInquiry = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/inquiries/${id}`);
+      await axios.delete(API_ENDPOINTS.INQUIRIES.BY_ID(id));
       setQueries(queries.filter((query) => query._id !== id));
       toast.success("Inquiry deleted successfully");
     } catch (error) {
@@ -66,7 +67,7 @@ const HrManagerDashboard = () => {
   // Handle accept and decline for leave requests
   const updateLeaveStatus = async (leaveId, status) => {
     try {
-      await axios.put(`http://localhost:5001/api/leaves/${leaveId}`, { status });
+      await axios.put(API_ENDPOINTS.LEAVES.BY_ID(leaveId), { status });
       setLeaves(
         leaves.map((leave) =>
           leave._id === leaveId ? { ...leave, status } : leave

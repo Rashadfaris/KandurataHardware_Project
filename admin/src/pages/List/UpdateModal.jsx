@@ -3,11 +3,11 @@ import Modal from 'react-modal';
 import axios from 'axios';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
-import './UpdateModal.css'; 
+import './UpdateModal.css';
 import { assets } from '../../assets/assets';
+import API_ENDPOINTS from '../../config/api.js';
 
 const UpdateModal = ({ isOpen, onRequestClose, product, onUpdate }) => {
-  const url = "http://localhost:5001";
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -46,7 +46,7 @@ const UpdateModal = ({ isOpen, onRequestClose, product, onUpdate }) => {
     // Fetch suppliers when modal is opened
     const fetchSuppliers = async () => {
       try {
-        const response = await axios.get(`${url}/api/suppliers/getSuppliers`);
+        const response = await axios.get(API_ENDPOINTS.SUPPLIERS.LIST);
         setSuppliers(response.data); // Populate suppliers
       } catch (error) {
         console.error('Error fetching suppliers:', error);
@@ -60,7 +60,7 @@ const UpdateModal = ({ isOpen, onRequestClose, product, onUpdate }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${url}/api/product/update`, {
+      const response = await axios.post(API_ENDPOINTS.PRODUCTS.UPDATE, {
         id: product._id,
         name,
         description,

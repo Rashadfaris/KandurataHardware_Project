@@ -4,10 +4,10 @@ import { assets } from '../../assets/assets';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import the CSS for react-confirm-alert
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const Add = () => {
-  const url = "http://localhost:5001"; // Updated URL for API
   const [image, setImage] = useState(null);
   const [productId, setProductId] = useState('');
   const [date, setDate] = useState('');
@@ -35,7 +35,7 @@ const Add = () => {
     // Fetch suppliers when the component mounts
     const fetchSuppliers = async () => {
       try {
-        const response = await axios.get(`${url}/api/suppliers/getSuppliers`);
+        const response = await axios.get(API_ENDPOINTS.SUPPLIERS.LIST);
         setSuppliers(response.data);
       } catch (error) {
         console.error("Error fetching suppliers:", error);
@@ -72,7 +72,7 @@ const Add = () => {
     formData.append("date", date);
 
     try {
-      const response = await axios.post(`${url}/api/product/add`, formData);
+      const response = await axios.post(API_ENDPOINTS.PRODUCTS.ADD, formData);
       if (response.data.success) {
         setData({
           name: "",

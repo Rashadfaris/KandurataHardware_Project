@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js'; // Import Filler
-import './SalesGraph.css'; // Import the CSS file
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
+import './SalesGraph.css';
+import { buildUrl } from '../../config/api.js';
 
 // Register required components, including the Filler plugin
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
@@ -13,7 +14,7 @@ const SalesGraph = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/invoice');
+        const response = await fetch(buildUrl('/api/invoice'));
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

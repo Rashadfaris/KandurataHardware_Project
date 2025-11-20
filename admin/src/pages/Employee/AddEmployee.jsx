@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
-import './AddEmployee.css'; // Importing the CSS file
+import 'react-toastify/dist/ReactToastify.css';
+import './AddEmployee.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const AddEmployee = () => {
     const navigate = useNavigate(); // Use the useNavigate hook
@@ -59,7 +60,7 @@ const AddEmployee = () => {
         if (!validateForm()) return;
 
         try {
-            const response = await fetch('http://localhost:5001/api/employees', {
+            const response = await fetch(API_ENDPOINTS.EMPLOYEES.BASE, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

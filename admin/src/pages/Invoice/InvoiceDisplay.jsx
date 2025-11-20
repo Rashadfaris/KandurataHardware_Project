@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './InvoiceDisplay.css'; // Import the CSS file
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import jsPDF from 'jspdf'; // Import jsPDF
-import 'jspdf-autotable'; // Optional plugin to add tables
+import './InvoiceDisplay.css';
+import { Link } from 'react-router-dom';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
+import { buildUrl } from '../../config/api.js';
 
 const InvoiceDisplay = () => {
   const [invoices, setInvoices] = useState([]);
@@ -13,7 +14,7 @@ const InvoiceDisplay = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/invoice'); // API endpoint for fetching invoices
+        const response = await fetch(buildUrl('/api/invoice'));
         if (!response.ok) {
           throw new Error('Failed to fetch invoices');
         }

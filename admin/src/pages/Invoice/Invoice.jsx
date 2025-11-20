@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import jsPDF from 'jspdf'; // Import jsPDF
-import 'jspdf-autotable'; // Import jsPDF auto-table plugin
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 import './Invoice.css';
+import { buildUrl } from '../../config/api.js';
 
 const Invoice = () => {
   const { state } = useLocation();
@@ -91,7 +92,7 @@ const Invoice = () => {
     doc.save('invoice.pdf');
 
     try {
-      const response = await fetch('http://localhost:5001/api/invoice', {
+      const response = await fetch(buildUrl('/api/invoice'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -122,7 +123,7 @@ const Invoice = () => {
     try {
       await Promise.all(
         invoiceItems.map(async (item) => {
-          const response = await fetch(`http://localhost:5001/api/product/update`, {
+          const response = await fetch(buildUrl('/api/product/update'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

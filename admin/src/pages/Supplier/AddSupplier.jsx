@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import './AddSupplier.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const AddSupplier = () => {
   const [name, setName] = useState('');
@@ -43,7 +44,7 @@ const AddSupplier = () => {
     setErrors({}); // Clear errors if there are none
 
     axios
-      .post('http://localhost:5001/api/suppliers/createSupplier', {
+      .post(API_ENDPOINTS.SUPPLIERS.CREATE, {
         name,
         company_name,
         contact_number,

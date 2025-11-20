@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './DriverForm.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const DriverForm = () => {
   const [driver, setDriver] = useState({
@@ -68,7 +69,7 @@ const DriverForm = () => {
     if (isValid.nicNumber && isValid.mobileNumber && isValid.emailAddress) {
       setIsSubmitting(true);
       try {
-        await axios.post('http://localhost:5001/drivers', driver);
+        await axios.post(API_ENDPOINTS.DRIVERS.BASE, driver);
         setDriver({
           firstName: '',
           lastName: '',

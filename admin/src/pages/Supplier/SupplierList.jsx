@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import jsPDF from 'jspdf';
 import './SupplierList.css';
+import API_ENDPOINTS from '../../config/api.js';
 
 const SupplierList = () => {
     const [suppliers, setSuppliers] = useState([]);
@@ -15,7 +16,7 @@ const SupplierList = () => {
     useEffect(() => {
         const fetchSuppliers = async () => {
             try {
-                const result = await axios.get('http://localhost:5001/api/suppliers/getSuppliers');
+                const result = await axios.get(API_ENDPOINTS.SUPPLIERS.LIST);
                 setSuppliers(result.data);
                 setFilteredSuppliers(result.data);
             } catch (err) {
@@ -40,7 +41,7 @@ const SupplierList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5001/api/suppliers/deleteSupplier/${id}`);
+            await axios.delete(API_ENDPOINTS.SUPPLIERS.DELETE(id));
             setMessage('Successfully deleted!');
             setTimeout(() => setMessage(''), 3000);
             setSuppliers(suppliers.filter(supplier => supplier._id !== id));

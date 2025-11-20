@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './LogisticsManager.css';
 import { Link } from 'react-router-dom';
+import { buildUrl } from '../../config/api.js';
 
 function Dashboard() {
   const [orders, setOrders] = useState([]);
@@ -12,7 +13,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api');
+        const response = await fetch(buildUrl('/api'));
         if (!response.ok) {
           throw new Error('Failed to fetch orders');
         }

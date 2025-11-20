@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import './Sales.css'; // Import the CSS file for styling
+import { Link } from 'react-router-dom';
+import './Sales.css';
+import { buildUrl } from '../../config/api.js';
 
 const Sales = () => {
   const [invoices, setInvoices] = useState([]);
@@ -10,7 +11,7 @@ const Sales = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/invoice'); // API endpoint for fetching invoices
+        const response = await fetch(buildUrl('/api/invoice'));
         if (!response.ok) {
           throw new Error('Failed to fetch invoices');
         }

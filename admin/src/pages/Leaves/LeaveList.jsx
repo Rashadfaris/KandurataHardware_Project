@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_ENDPOINTS from '../../config/api.js';
 
 const LeaveList = () => {
   const [leaves, setLeaves] = useState([]);
@@ -8,7 +9,7 @@ const LeaveList = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/leaves');
+        const response = await axios.get(API_ENDPOINTS.LEAVES.BASE);
         setLeaves(response.data);
       } catch (error) {
         console.error('Error fetching leaves:', error);

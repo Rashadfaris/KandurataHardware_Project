@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { buildUrl } from '../../config/api.js';
 
 const Order = () => {
     const [orders, setOrders] = useState([]);
@@ -30,7 +31,7 @@ const Order = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch('http://localhost:5001/api');
+                const response = await fetch(buildUrl('/api'));
                 if (!response.ok) {
                     throw new Error('Failed to fetch orders');
                 }
@@ -43,7 +44,7 @@ const Order = () => {
 
         const fetchDrivers = async () => {
             try {
-                const response = await fetch('http://localhost:5001/drivers');
+                const response = await fetch(buildUrl('/drivers'));
                 if (!response.ok) {
                     throw new Error('Failed to fetch drivers');
                 }
