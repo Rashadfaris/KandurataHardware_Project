@@ -1,7 +1,8 @@
 // API Configuration for Admin Panel
 // This file centralizes all API endpoint configurations
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001';
+const FALLBACK_PROD_URL = 'https://distinguished-enchantment-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || FALLBACK_PROD_URL;
 
 export const API_ENDPOINTS = {
     // Base URL
