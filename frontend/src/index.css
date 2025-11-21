@@ -22,9 +22,8 @@ a{
 
 .app{
   width: 80%;
-  margin: auto;
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @keyframes identifier {
@@ -58,7 +57,6 @@ a{
   .app {
     width: 100%;
     padding: 0 10px;
-    overflow-x: hidden;
   }
 
   body {
