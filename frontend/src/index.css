@@ -6,9 +6,14 @@
   font-family: Outfit;
 
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
 body{
   min-height: 100vh;
-
+  position: relative;
 }
 a{
   text-decoration: none;
@@ -18,7 +23,8 @@ a{
 .app{
   width: 80%;
   margin: auto;
-
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @keyframes identifier {
@@ -52,9 +58,20 @@ a{
   .app {
     width: 100%;
     padding: 0 10px;
+    overflow-x: hidden;
   }
 
   body {
     font-size: 12px;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }

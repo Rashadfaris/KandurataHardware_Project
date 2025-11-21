@@ -3,12 +3,14 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 20px 8vw;
     gap: 20px;
     padding-top: 80px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .footer-container {

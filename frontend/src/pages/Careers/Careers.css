@@ -1,0 +1,113 @@
+.careers-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.careers-container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.careers-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.careers-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.careers-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.careers-section h2 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.careers-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.careers-section ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    color: #555;
+}
+
+.careers-section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.openings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.opening-item {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #e67e22;
+}
+
+.opening-item h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.opening-item p {
+    color: #666;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .careers-container {
+        padding: 20px 15px;
+    }
+
+    .careers-container h1 {
+        font-size: 2rem;
+    }
+
+    .careers-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .careers-section p,
+    .careers-section li {
+        font-size: 1rem;
+    }
+}
+

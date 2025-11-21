@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../assets/logo_footer.png'; // Adjust the path if necessary
 import facebookIcon from '../../assets/facebook_icon.png';
@@ -29,17 +30,17 @@ const Footer = () => {
                 <div className="ifooter-section links">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/careers">Careers</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/privacy">Privacy Policy</Link></li>
                     </ul>
                 </div>
                 <div className="ifooter-section contact">
                     <h3>GET IN TOUCH</h3>
                     <p>1234 Street Name, City, Country</p>
-                    <p>Email: support@example.com</p>
-                    <p>Phone: +1 234 567 890</p>
+                    <p>Email: <a href="mailto:rashadfaris4675@gmail.com">rashadfaris4675@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+94779207875">077 9207875</a></p>
                 </div>
             </div>
             <div className="ifooter-bottom" style={{ textAlign: 'center', padding: '10px 0', backgroundColor: '#222', color: 'white' }}>

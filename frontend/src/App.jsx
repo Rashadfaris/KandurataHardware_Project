@@ -11,6 +11,10 @@ import OrderConfirmation from './pages/OrderConformation/OrderConfirmation';
 import UserOrders from './pages/UserOrders/Order'
 import UserQueries from './components/Inquiry/UserQueries';
 import EditInquiryForm from './components/Inquiry/EditInquiryForm';
+import About from './pages/About/About';
+import Careers from './pages/Careers/Careers';
+import Contact from './pages/Contact/Contact';
+import Privacy from './pages/Privacy/Privacy';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -43,7 +47,11 @@ const App = () => {
         <Route path='/login' element={<LoginPopup setShowLogin={setShowLogin} />} />
         <Route path="/contact-us" element={<ContactUsForm />} />
         <Route path="/queries" element={<UserQueries />} />
-        <Route path="/edit-inquiry/:id" element={<EditInquiryForm />} /> {/* Ensure correct route here */}
+        <Route path="/edit-inquiry/:id" element={<EditInquiryForm />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </div>
   );
