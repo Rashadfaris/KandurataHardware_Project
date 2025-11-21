@@ -3,10 +3,13 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  width: 100%;
+ /* width: 100%;*/
   padding: 10px 5vw;
   gap: 10px;
   box-sizing: border-box;
+  /*for full width*/
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 /* Main Container */
