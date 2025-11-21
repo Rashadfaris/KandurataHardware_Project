@@ -1,12 +1,12 @@
 import React from 'react';
 import './Contact.css';
-import Navbar from '../../components/Navbar/Navbar';
+
 import Footer from '../../components/Footer/Footer';
 
 const Contact = () => {
     return (
         <div className="contact-page">
-            <Navbar />
+           
             <div className="contact-container">
                 <h1>Contact Us</h1>
                 <div className="contact-content">

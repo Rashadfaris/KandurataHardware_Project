@@ -1,12 +1,12 @@
 import React from 'react';
 import './Careers.css';
-import Navbar from '../../components/Navbar/Navbar';
+
 import Footer from '../../components/Footer/Footer';
 
 const Careers = () => {
     return (
         <div className="careers-page">
-            <Navbar />
+            
             <div className="careers-container">
                 <h1>Careers at Kandurata Hardware</h1>
                 <div className="careers-content">
