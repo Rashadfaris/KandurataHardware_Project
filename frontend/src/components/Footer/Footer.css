@@ -6,26 +6,26 @@
     width: 100%;
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
-    padding: 20px 8vw;
-    gap: 20px;
-    padding-top: 80px;
+    padding: 40px 8vw 20px;
+    gap: 15px;
     box-sizing: border-box;
     overflow-x: hidden;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Space between sections */
-    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding: 0; /* Remove side padding */
-    margin: 0; /* Remove margin */
+    padding: 0;
+    margin: 0;
+    gap: 30px;
 }
 
 .ifooter-section {
     flex: 1;
-    margin: 10px;
     min-width: 200px;
+    max-width: 350px;
 }
 
 /* Ensure text in sections is left-aligned */
@@ -41,25 +41,51 @@
 }
 
 .footer-logo {
-    max-width: 100%;
+    max-width: 180px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .ifooter-section h3 {
     border-bottom: 2px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    color: #fff; /* Ensure heading is white */
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ifooter-section.description p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #ddd;
 }
 
 .ifooter-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .ifooter-section ul li {
-    margin: 10px 0;
+    margin: 8px 0;
+}
+
+.ifooter-section.contact p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.ifooter-section.contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ifooter-section.contact a:hover {
+    text-decoration: underline;
 }
 
 .ifooter-section ul li a {
@@ -77,27 +103,29 @@
 }
 
 .social-media-icons {
-    margin-top: 10px; /* Add space above the icons */
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .social-icon {
-    width: 30px; /* Adjust the width of icons */
-    height: auto; /* Keep aspect ratio */
-    margin: 0 10px; /* Space between icons */
-    transition: transform 0.3s; /* Smooth effect on hover */
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Scale up icon on hover */
+    transform: scale(1.15);
 }
 
 /* Footer Bottom Section */
 .ifooter-bottom {
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     background-color: #222;
     color: white;
-    margin-top: 20px;
+    margin-top: 15px;
     border-top: 1px solid #444;
     width: 100%;
     box-sizing: border-box;
@@ -105,105 +133,168 @@
 
 .ifooter-bottom p {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
+    color: #ccc;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footer {
-    padding: 20px 4vw;
-    padding-top: 60px;
-    margin-left: calc(-50vw + 50%);
+    padding: 30px 4vw 15px;
+    gap: 12px;
   }
 
   .footer-container {
-    gap: 20px;
+    gap: 25px;
   }
 
   .ifooter-section {
     min-width: 180px;
+    max-width: 300px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+  }
+
+  .ifooter-section h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .ifooter-section.description p,
+  .ifooter-section.contact p {
+    font-size: 13px;
   }
 
   .ifooter-bottom {
-    padding: 8px 0;
-  }
-
-  .ifooter-bottom p {
-    font-size: 13px;
+    padding: 10px 0;
+    margin-top: 12px;
   }
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 20px 3vw;
-    padding-top: 40px;
-    gap: 15px;
-    margin-left: calc(-50vw + 50%);
+    padding: 25px 3vw 15px;
+    gap: 12px;
   }
 
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
   .ifooter-section {
     min-width: 100%;
-    margin: 10px 0;
+    max-width: 100%;
     text-align: center;
   }
 
-  .footer .ifooter-section.description p,
-  .footer .ifooter-section.contact p {
-    text-align: center;
+  .footer-logo {
+    max-width: 140px;
+    margin-bottom: 10px;
   }
 
-  .ifooter-section {
+  .ifooter-section h3 {
+    font-size: 16px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+  }
+
+  .ifooter-section.description p {
+    font-size: 13px;
+    line-height: 1.5;
     text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .ifooter-section.contact p {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .ifooter-section ul li {
+    margin: 6px 0;
+    font-size: 14px;
+  }
+
+  .social-media-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .social-icon {
+    width: 26px;
+    height: 26px;
   }
 
   .ifooter-bottom {
-    padding: 8px 0;
+    padding: 10px 0;
+    margin-top: 10px;
   }
 
   .ifooter-bottom p {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px 2vw;
-    padding-top: 30px;
+    padding: 20px 4vw 12px;
     gap: 10px;
-    margin-left: calc(-50vw + 50%);
+  }
+
+  .footer-container {
+    gap: 15px;
   }
 
   .footer-logo {
-    max-width: 80%;
+    max-width: 120px;
+    margin-bottom: 8px;
   }
 
   .ifooter-section h3 {
-    font-size: 16px;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+
+  .ifooter-section.description p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .ifooter-section.contact p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 1.5;
   }
 
   .ifooter-section ul li {
-    margin: 8px 0;
-    font-size: 14px;
+    margin: 5px 0;
+    font-size: 13px;
+  }
+
+  .social-media-icons {
+    margin-top: 8px;
+    gap: 6px;
   }
 
   .social-icon {
-    width: 25px;
-    margin: 0 8px;
+    width: 24px;
+    height: 24px;
   }
 
   .ifooter-bottom {
     padding: 8px 0;
+    margin-top: 8px;
   }
 
   .ifooter-bottom p {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
