@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 25px 5vw 15px;
+  padding: 10px 5vw;
   gap: 10px;
   box-sizing: border-box;
 }
@@ -14,37 +14,39 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Footer sections */
 .ifooter-section {
   flex: 1;
-  min-width: 220px;
-  max-width: 350px;
+  min-width: 180px;
+  max-width: 280px;
 }
 
 /* Logo */
 .footer-logo {
-  max-width: 150px;
-  margin-bottom: 10px;
+  max-width: 140px;
+  margin-bottom: 8px;
 }
 
-/* Heading */
+/* Headings */
 .ifooter-section h3 {
   border-bottom: 2px solid #fff;
-  padding-bottom: 6px;
-  margin-bottom: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
   font-size: 16px;
   font-weight: 600;
 }
 
-/* Descriptions */
+/* Text styling */
 .ifooter-section.description p,
 .ifooter-section.contact p {
   font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 8px;
+  line-height: 1.45;
+  margin-bottom: 6px;
   color: #ddd;
 }
 
@@ -80,6 +82,7 @@
   width: 24px;
   height: 24px;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .social-icon:hover {
@@ -89,7 +92,7 @@
 /* Footer bottom */
 .ifooter-bottom {
   text-align: center;
-  padding: 10px 0;
+  padding: 6px 0;
   background-color: #222;
   border-top: 1px solid #444;
 }
@@ -103,49 +106,46 @@
 /* Tablet */
 @media (max-width: 768px) {
   .footer {
-      padding: 20px 4vw 12px;
+    padding: 15px 5vw;
   }
 
   .footer-container {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
   }
 
   .ifooter-section {
-      max-width: 100%;
-      text-align: center;
+    max-width: 100%;
   }
 
   .footer-logo {
-      max-width: 130px;
-      margin: 0 auto 10px;
+    margin: 0 auto 10px;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
   .footer {
-      padding: 18px 5vw 10px;
+    padding: 14px 5vw;
   }
 
   .ifooter-section h3 {
-      font-size: 14px;
-      padding-bottom: 5px;
+    font-size: 14px;
   }
 
   .ifooter-section.description p,
   .ifooter-section.contact p {
-      font-size: 12px;
-      line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .social-icon {
-      width: 22px;
-      height: 22px;
+    width: 22px;
+    height: 22px;
   }
 
   .ifooter-bottom p {
-      font-size: 11px;
+    font-size: 11px;
   }
 }
