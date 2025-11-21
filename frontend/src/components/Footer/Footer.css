@@ -1,300 +1,151 @@
 .footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding: 40px 8vw 20px;
-    gap: 15px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 5vw 15px;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
+/* Main Container */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
+/* Footer sections */
 .ifooter-section {
-    flex: 1;
-    min-width: 200px;
-    max-width: 350px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 350px;
 }
 
-/* Ensure text in sections is left-aligned */
-.footer .ifooter-section.description p,
-.footer .ifooter-section.contact p,
-.footer .ifooter-bottom p {
-    color: #fff; /* Ensure text is white */
-}
-
-.footer .ifooter-section.description p,
-.footer .ifooter-section.contact p {
-    text-align: left; /* Left align the text in sections */
-}
-
+/* Logo */
 .footer-logo {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 12px;
+  max-width: 150px;
+  margin-bottom: 10px;
 }
 
+/* Heading */
 .ifooter-section h3 {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 8px;
-    margin-bottom: 12px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.ifooter-section.description p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    color: #ddd;
+/* Descriptions */
+.ifooter-section.description p,
+.ifooter-section.contact p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #ddd;
 }
 
+/* Links */
 .ifooter-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .ifooter-section ul li {
-    margin: 8px 0;
-}
-
-.ifooter-section.contact p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 8px;
-    color: #ddd;
-}
-
-.ifooter-section.contact a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.ifooter-section.contact a:hover {
-    text-decoration: underline;
+  margin: 6px 0;
 }
 
 .ifooter-section ul li a {
-    color: #fff; /* All text is white */
-    text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .ifooter-section ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Optional: Ensure sections maintain left alignment */
-.ifooter-section {
-    text-align: left; /* Apply left alignment to all sections */
-}
-
+/* Social Icons */
 .social-media-icons {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
 }
 
 .social-icon {
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
 }
 
 .social-icon:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
-/* Footer Bottom Section */
+/* Footer bottom */
 .ifooter-bottom {
-    text-align: center;
-    padding: 12px 0;
-    background-color: #222;
-    color: white;
-    margin-top: 15px;
-    border-top: 1px solid #444;
-    width: 100%;
-    box-sizing: border-box;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #222;
+  border-top: 1px solid #444;
 }
 
 .ifooter-bottom p {
-    margin: 0;
-    font-size: 13px;
-    color: #ccc;
+  margin: 0;
+  font-size: 12px;
+  color: #ccc;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Tablet */
+@media (max-width: 768px) {
   .footer {
-    padding: 30px 4vw 15px;
-    gap: 12px;
+      padding: 20px 4vw 12px;
   }
 
   .footer-container {
-    gap: 25px;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
   }
 
   .ifooter-section {
-    min-width: 180px;
-    max-width: 300px;
+      max-width: 100%;
+      text-align: center;
   }
 
   .footer-logo {
-    max-width: 150px;
+      max-width: 130px;
+      margin: 0 auto 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer {
+      padding: 18px 5vw 10px;
   }
 
   .ifooter-section h3 {
-    font-size: 17px;
-    margin-bottom: 10px;
+      font-size: 14px;
+      padding-bottom: 5px;
   }
 
   .ifooter-section.description p,
   .ifooter-section.contact p {
-    font-size: 13px;
-  }
-
-  .ifooter-bottom {
-    padding: 10px 0;
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 25px 3vw 15px;
-    gap: 12px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .ifooter-section {
-    min-width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .footer-logo {
-    max-width: 140px;
-    margin-bottom: 10px;
-  }
-
-  .ifooter-section h3 {
-    font-size: 16px;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
-  }
-
-  .ifooter-section.description p {
-    font-size: 13px;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .ifooter-section.contact p {
-    font-size: 13px;
-    text-align: center;
-    margin-bottom: 6px;
-  }
-
-  .ifooter-section ul li {
-    margin: 6px 0;
-    font-size: 14px;
-  }
-
-  .social-media-icons {
-    justify-content: center;
-    margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.4;
   }
 
   .social-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .ifooter-bottom {
-    padding: 10px 0;
-    margin-top: 10px;
+      width: 22px;
+      height: 22px;
   }
 
   .ifooter-bottom p {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 20px 4vw 12px;
-    gap: 10px;
-  }
-
-  .footer-container {
-    gap: 15px;
-  }
-
-  .footer-logo {
-    max-width: 120px;
-    margin-bottom: 8px;
-  }
-
-  .ifooter-section h3 {
-    font-size: 15px;
-    padding-bottom: 5px;
-    margin-bottom: 8px;
-  }
-
-  .ifooter-section.description p {
-    font-size: 12px;
-    line-height: 1.4;
-    margin-bottom: 8px;
-  }
-
-  .ifooter-section.contact p {
-    font-size: 12px;
-    margin-bottom: 5px;
-    line-height: 1.5;
-  }
-
-  .ifooter-section ul li {
-    margin: 5px 0;
-    font-size: 13px;
-  }
-
-  .social-media-icons {
-    margin-top: 8px;
-    gap: 6px;
-  }
-
-  .social-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .ifooter-bottom {
-    padding: 8px 0;
-    margin-top: 8px;
-  }
-
-  .ifooter-bottom p {
-    font-size: 11px;
+      font-size: 11px;
   }
 }
