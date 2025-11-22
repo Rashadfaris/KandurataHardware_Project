@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { buildUrl } from '../../config/api.js';
+import './Orders.css';
 
 const Order = () => {
     const [orders, setOrders] = useState([]);
@@ -155,9 +156,9 @@ const Order = () => {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className="app-content" style={{ display: 'flex' }}>
+        <div className="dashboard">
             {/* Sidebar */}
-            <div className="PrdAddSidebar" style={{ flex: '0 0 250px', padding: '10px', borderRight: '1px solid #ccc' }}>
+            <div className="PrdAddSidebar">
                 <ul className="sidebar-list">
                     <li className="sidebar-item"><Link to="/dashboard/admin">Dashboard</Link></li>
                     <li className="sidebar-item"><Link to="/add">Add Items</Link></li>
@@ -170,7 +171,7 @@ const Order = () => {
                 </ul>
             </div>
 
-            <div className="main-content" style={{ flex: '1', padding: '10px' }}>
+            <div className="orders-container">
                 <h1 className="header1">Delivery Schedule</h1>
                 <h2>Total Orders: {totalOrders}</h2> {/* Display total number of orders */}
 

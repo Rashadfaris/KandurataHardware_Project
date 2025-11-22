@@ -4,15 +4,15 @@
   width: 100%;
   display: flex;
   height: 88vh;
-  font-family: Arial, sans-serif; /* Ensure a clean, modern font */
+  font-family: Arial, sans-serif;
 }
 
 .user-table-content {
-  flex: 1; /* Allow content to fill remaining space */
-  padding: 20px; /* Add some padding */
-  display: flex; /* Center align the table */
-  flex-direction: column; /* Align items vertically */
-  align-items: center; /* Center horizontally */
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user-table {
@@ -94,7 +94,7 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  display: block; 
+  display: block;
   padding: 10px;
   border-radius: 4px;
 }
@@ -104,19 +104,69 @@ h1 {
   text-decoration: underline;
 }
 
-
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-  .user-table {
-      width: 100%; /* Ensure the table uses full width on smaller screens */
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .user-table-container {
+    flex-direction: column;
+    height: auto;
   }
 
-  .user-table img {
-      width: 40px; /* Optional: If you have images in the table */
+  .UserSidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .UserSidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .user-table-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .UserSidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .UserSidebar ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .user-table-content {
+    padding: 10px;
+  }
+
+  .user-table {
+    width: 100%;
+    max-width: none;
+    overflow-x: auto;
+    font-size: 14px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-table {
+    font-size: 12px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 6px;
   }
 
   .user-table td button {
-      font-size: 12px; /* Smaller font size for buttons on mobile */
-      padding: 4px 8px; /* Adjust padding for mobile */
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }
